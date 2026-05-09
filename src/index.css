@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', 'system-ui', 'sans-serif';
+    @apply bg-gradient-to-br from-surface-tint via-surface-page to-trust-50/25 text-gray-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg shadow-premium-sm border border-primary-500/90 transition-all duration-300 hover:shadow-premium hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-trust-700 hover:bg-trust-800 text-white font-medium py-2 px-6 rounded-lg shadow-premium-sm border border-trust-500/50 transition-all duration-300 hover:shadow-premium hover:-translate-y-0.5;
+  }
+
+  .btn-gold {
+    @apply bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-primary-950 font-medium py-2 px-6 rounded-lg shadow-premium-sm border border-gold-400/90 transition-all duration-300 hover:shadow-premium hover:-translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-trust-700 text-trust-900 bg-white/90 hover:bg-primary-50 hover:border-primary-600 font-medium py-2 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl border border-primary-200/75 shadow-soft hover:shadow-premium-sm transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(rgba(212, 90, 15, 0.09) 1px, transparent 1px), radial-gradient(rgba(44, 85, 128, 0.05) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: 0 0, 11px 11px;
+  }
+
+  .page-content-panel {
+    @apply bg-white/95 backdrop-blur-sm border-2 border-primary-200/80 shadow-soft rounded-xl ring-1 ring-trust-200/35;
+  }
+}
