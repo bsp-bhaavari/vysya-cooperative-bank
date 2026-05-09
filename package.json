@@ -1,7 +1,8 @@
 {
-  "name": "modern-bank-website",
+  "name": "vysya-cooperative-bank",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://bsp-bhaavari.github.io/bank_website",
   "dependencies": {
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",
