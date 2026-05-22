@@ -1,117 +1,130 @@
 import React from 'react';
 import Card, { CardHeader, CardTitle, CardContent } from '../../components/Card';
+import Table from '../../components/Table';
 
 const BoardOfDirectors = () => {
+  const presentBoard = [
+    ['Sri K.N.Govindaraju', 'President'],
+    ['CA Ramamurthy.K.S.\nB.Com., FCA, DISA (ICAI)', 'Vice President'],
+    ['Sri K.P.Suresh', 'Director'],
+    ['Sri M.Nagasundar B.Com.', 'Director'],
+    ['Sri B.S.Lokanath', 'Director'],
+    ['Sri Prasoon Makam T.S.', 'Director'],
+    ['Sri N.V.Balaji', 'Director'],
+    ['Sri Arun Kumar.N.A.', 'Director'],
+    ['Sri Venkataraju.K', 'Director'],
+    ['Sri Lakshmikantha Setty B', 'Director'],
+    ['Sri Narasimha Murthy.T', 'Director'],
+    ['Sri Rajashekar K.R.', 'Director'],
+    ['Sri Sanjay.C.S.', 'Director'],
+    ['Sri Lakshmipathi.D.L.', 'Director'],
+    ['Sri Parthasarathi.T.A', 'Director'],
+    ['Sri Raghavendra.L.A.', 'Director'],
+    ['Sri Kanakalakshmi C.B.', 'Director'],
+    ['Smt. Geetha Balaraju', 'Director'],
+    ['Smt. Suma.S.', 'C.E.O']
+  ];
+
+  const originalBoard = [
+    ['Sampangi Ramu.T.A.', 'President'],
+    ['Shashikumar.T.S.', 'Vice-President'],
+    ['Nagendra Prasad.N.S.', "Hon'ble Secretary"],
+    ['Gurappa Setty.M.K.', 'Director'],
+    ['Janardhan.K.V.', 'Director'],
+    ['Manjunath.T.A.', 'Director'],
+    ['Mohan Kumar.C.R.', 'Director'],
+    ['Narasimha.N.S.', 'Director'],
+    ['Rajagopala Setty.N.S.', 'Director'],
+    ['Subbaraju.N.A.', 'Director'],
+    ['Ashok Kumar.T.V.', 'Director'],
+    ['Neelakanta Setty MV', 'Director']
+  ];
+
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Board of Directors</h1>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>President Profile</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-2 text-gray-700">
-            <p><strong>Sri Govindaraju.K.N — President</strong></p>
-            <p>
-              Sri Govindaraju.K.N is a visionary par excellence. His passion ensured that the Bank reached 
-              a Scheduled Bank Status through his continuous guidance and exemplary leadership. His reformist 
-              zeal has helped the society at large through his active role in various institutions and 
-              activities like Educational Institutes, Hostel for Boys. He is a pioneer in the Lorry 
-              Transports and Briquette industry. He has travelled widely as part of study tours of 
-              Co-operative Banking System across Country as well as across other parts of the world.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="grid md:grid-cols-2 gap-8">
+        <Card>
+          <CardHeader>
+            <CardTitle>President</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <img
+                src="/images/president_Govindaraju_KN_photo.jpg"
+                alt="Sri K.N.Govindaraju"
+                className="w-48 h-56 object-cover rounded-lg shadow-md mx-auto"
+              />
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900">Sri K.N.Govindaraju</h3>
+                <p className="text-primary-600 font-semibold">President</p>
+              </div>
+              <div className="space-y-2 text-gray-700 mt-4">
+                <p>
+                  Sri Govindaraju.K.N is a visionary par excellence. His passion ensured that the Bank reached
+                  a Scheduled Bank Status through his continuous guidance and exemplary leadership. His reformist
+                  zeal has helped the society at large through his active role in various institutions and
+                  activities like Educational Institutes, Hostel for Boys. He is a pioneer in the Lorry
+                  Transports and Briquette industry. He has travelled widely as part of study tours of
+                  Co-operative Banking System across Country as well as across other parts of the world.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Vice President</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <img
+                src="/images/vice_president_Ramamurthy_KS_photo.jpg"
+                alt="CA Ramamurthy K.S."
+                className="w-48 h-56 object-cover rounded-lg shadow-md mx-auto"
+              />
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900">CA Ramamurthy.K.S.</h3>
+                <p className="text-primary-600 font-semibold">B.Com., FCA, DISA (ICAI)</p>
+                <p className="text-primary-600 font-semibold">Vice President</p>
+              </div>
+              <div className="space-y-2 text-gray-700 mt-4">
+                <p>
+                  CA Ramamurthy.K.S. is a practicing Chartered Accountant and heads K.S.R Murthy & Co.,
+                  which started its operations since early 1998. He is a B.Com, FCA, DISA (ICAI) qualified
+                  professional with membership No. 207853.
+                </p>
+                <p>
+                  K.S.R Murthy & Co. helps clients make correct decisions and ensures growth strategies
+                  remain on track. With a team of audit professionals, the firm provides expert services
+                  in accounts, tax advisory, and consultancy across multiple industries including banking,
+                  agro processing, construction, IT, manufacturing, and government institutions.
+                </p>
+                <p>
+                  Their services help improve operational efficiency, obtain management information from
+                  financial systems, create effective controls, minimize tax outflows, and restructure
+                  organizations.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Loan Committee (w.e.f 28th February 2015)</CardTitle>
+          <CardTitle>Present Board of Directors</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Joint Loan, Pledge Loan, Hypothecation Loan & Share Loan:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Sri Rajashekharaiah V.K — President</li>
-                <li>• Sri. Suresh Kumar R.A — Member</li>
-                <li>• Sri. G.C. Basavaraju — Member</li>
-                <li>• Sri. D.P. Basavaraju — Member</li>
-                <li>• Sri. Balarama Shetty — Member</li>
-                <li>• Special Invitees: Sri. Suresh T.R., Sri Mudalagiriyappa G.C.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Mortgage of Property & Machinery Loan Committee:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Sri. Divyanandamurthy H. M. — President</li>
-                <li>• Sri. Jinesh Jain M. S. — Member</li>
-                <li>• Sri. Srinath K. V. — Member</li>
-                <li>• Sri. Nataraj C R. — Member</li>
-                <li>• Sri. M. Deepak. — Member</li>
-                <li>• Special Invitees: Sri. M.P. Mahesh</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Senior Executives</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-1 text-gray-700">
-            <li>• Sri. Aravind.M.R — CHIEF Executive Officer — 95918-00360</li>
-            <li>• Sri. Sateesha.S. — AGM (System Admin.) — 9845322286</li>
-            <li>• Sri Suryanarayana Setty.G — Sale Officer — 99000-19878</li>
-            <li>• Jyothi A — Admin Dept — 7760979176</li>
-          </ul>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Branch Managers</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Tumkur:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Sri. Shiva Prakash.K.S. (H.O. Br. Tumkur) — Manager — 99000 19918</li>
-                <li>• Smt. Suma.S — APMC Yard Branch — 99000 19784</li>
-                <li>• Smt. Sindhu.T.A. — SIT Extension (Vijaya nagara) Branch — 99000 19115</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Madhugiri:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Sri. Sainath Babu.K.S — 99000 19862</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Pavagada:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Anuradha.T.R. — 9900018995</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Bangalore:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Sri. Laxmi Narayan Setty.A.N — APMC Yard Branch, Yesvanthpur — 99000 24994</li>
-                <li>• Sri. Srinivas.G.V. — BVK Iyengar Road (Chickpet) Branch — 99000 23908</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Mysuru:</h3>
-              <ul className="space-y-1 text-gray-700">
-                <li>• Sri. Manjunath Guptha NV — 99000 19812</li>
-              </ul>
-            </div>
+          <div className="overflow-x-auto">
+            <Table
+              headers={['Name', 'Designation']}
+              rows={presentBoard}
+            />
           </div>
         </CardContent>
       </Card>
@@ -121,9 +134,12 @@ const BoardOfDirectors = () => {
           <CardTitle>Board of Directors at the time of establishment (1978)</CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-1 text-gray-700">
-            <li>• Sri. Sampangi Ramu.T.A. (President)</li>
-          </ul>
+          <div className="overflow-x-auto">
+            <Table
+              headers={['Name', 'Designation']}
+              rows={originalBoard}
+            />
+          </div>
         </CardContent>
       </Card>
     </div>

@@ -1,17 +1,32 @@
 import React from 'react';
-import BankingPageTemplate from '../../components/BankingPageTemplate';
-import { servicesData } from '../../data/bankingData';
+import { CreditCard, Clock } from 'lucide-react';
+import Card, { CardContent } from '../../components/Card';
 
 export default function ATMCard() {
-  const data = servicesData.atmCard;
-
   return (
     <div className="section-padding">
       <div className="container-max">
-        <BankingPageTemplate 
-          type="service" 
-          data={data}
-        />
+        <div className="flex items-center space-x-4 mb-6">
+          <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
+            <CreditCard className="w-8 h-8 text-primary-600" />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">ATM RuPay Debit Card</h1>
+            <p className="text-gray-600">Debit card services</p>
+          </div>
+        </div>
+
+        <Card>
+          <CardContent>
+            <div className="text-center py-12">
+              <Clock className="w-16 h-16 text-primary-400 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">VERY Shortly</h2>
+              <p className="text-gray-600 max-w-md mx-auto">
+                ATM RuPay Card services will be available very shortly. Please check back later for updates.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

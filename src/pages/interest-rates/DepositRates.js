@@ -7,21 +7,18 @@ import { interestRatesData } from '../../data/bankingData';
 const DepositRates = () => {
   const depositRates = interestRatesData.deposits;
 
-  const tableHeaders = ['Deposit Name', 'Interest Rate', 'Minimum Balance', 'Special Features'];
+  const tableHeaders = ['Tenure', 'Interest Rate'];
 
   const tableData = (depositRates || []).map(deposit => [
     deposit.depositName,
-    deposit.interestRate,
-    deposit.minBalance,
-    deposit.specialFeatures
+    deposit.interestRate
   ]);
 
   const importantNotes = [
     'Interest rates are subject to change without prior notice',
-    'Senior citizen benefits applicable for customers aged 60 years and above',
+    'Senior citizen benefits: Additional 0.50% on deposits above 1 year for customers aged 60 years and above',
     'TDS will be deducted as per Income Tax Act provisions',
-    'Interest is calculated on daily balance and paid quarterly',
-    'Special rates for NRI accounts as per RBI guidelines',
+    'Interest is calculated on daily balance and paid half yearly for savings account',
     'Premature withdrawal penalties may apply',
     'For detailed terms and conditions, please contact branch',
     'Rates may vary based on deposit amount and tenure'
@@ -60,7 +57,7 @@ const DepositRates = () => {
             <div>
               <h4 className="font-semibold text-primary-900 mb-3">Senior Citizen Benefits</h4>
               <ul className="space-y-2 text-sm text-gray-700 leading-relaxed">
-                <li>• Additional 0.50% interest on all deposits</li>
+                <li>• Additional 0.50% interest on deposits above 1 year</li>
                 <li>• Priority service at all branches</li>
                 <li>• Free demand drafts up to ₹25,000/month</li>
                 <li>• Dedicated customer service helpline</li>
@@ -69,8 +66,8 @@ const DepositRates = () => {
             <div>
               <h4 className="font-semibold text-primary-900 mb-3">Long-Term Deposit Benefits</h4>
               <ul className="space-y-2 text-sm text-gray-700 leading-relaxed">
-                <li>• Higher rates for deposits above 5 years</li>
-                <li>• Loan facility against deposit</li>
+                <li>• Higher rates for deposits above 1 year</li>
+                <li>• Loan facility against deposit up to 85%</li>
                 <li>• Auto-renewal option available</li>
                 <li>• Quarterly interest payment option</li>
               </ul>

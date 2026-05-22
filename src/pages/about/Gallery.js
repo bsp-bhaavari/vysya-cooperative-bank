@@ -12,96 +12,24 @@ const Gallery = () => {
     { id: 'community', name: 'Community' }
   ];
 
-  const gallery = [
-    {
-      id: 1,
-      title: 'Annual Banking Summit 2023',
-      category: 'events',
-      description: 'Our leadership team at the National Banking Summit',
-      image: '🏛️'
-    },
-    {
-      id: 2,
-      title: 'New Branch Opening',
-      category: 'branches',
-      description: 'Inauguration of our 25th branch in the city center',
-      image: '🏦'
-    },
-    {
-      id: 3,
-      title: 'Best Bank Award 2023',
-      category: 'awards',
-      description: 'Receiving the prestigious Best Cooperative Bank Award',
-      image: '🏆'
-    },
-    {
-      id: 4,
-      title: 'Financial Literacy Camp',
-      category: 'community',
-      description: 'Educating rural communities about banking services',
-      image: '🎓'
-    },
-    {
-      id: 5,
-      title: 'Digital Banking Launch',
-      category: 'events',
-      description: 'Launch of our new mobile banking application',
-      image: '📱'
-    },
-    {
-      id: 6,
-      title: 'Head Office Building',
-      category: 'branches',
-      description: 'Our state-of-the-art head office facility',
-      image: '🏢'
-    },
-    {
-      id: 7,
-      title: 'Excellence in Customer Service',
-      category: 'awards',
-      description: 'Award for outstanding customer satisfaction',
-      image: '⭐'
-    },
-    {
-      id: 8,
-      title: 'Tree Plantation Drive',
-      category: 'community',
-      description: 'Environmental initiative by our bank employees',
-      image: '🌳'
-    },
-    {
-      id: 9,
-      title: 'Board Meeting',
-      category: 'events',
-      description: 'Strategic planning session with the board of directors',
-      image: '👥'
-    },
-    {
-      id: 10,
-      title: 'ATM Center',
-      category: 'branches',
-      description: '24/7 ATM facility at a prime location',
-      image: '💳'
-    },
-    {
-      id: 11,
-      title: 'Innovation Award',
-      category: 'awards',
-      description: 'Recognition for innovative banking solutions',
-      image: '💡'
-    },
-    {
-      id: 12,
-      title: 'Blood Donation Camp',
-      category: 'community',
-      description: 'Corporate social responsibility initiative',
-      image: '🩸'
-    }
+  const galleryItems = [
+    { id: 1, title: 'Annual Banking Summit', category: 'events', description: 'Our leadership team at the Banking Summit', image: '/images/gallery/event_1.jpg' },
+    { id: 2, title: 'Banking Conference', category: 'events', description: 'Participating in national banking conference', image: '/images/gallery/event_2.jpg' },
+    { id: 3, title: 'Board Meeting', category: 'events', description: 'Strategic planning session with board of directors', image: '/images/gallery/event_3.jpg' },
+    { id: 4, title: 'Administrative Office', category: 'branches', description: 'Our administrative office building', image: '/images/gallery/branch_1.jpg' },
+    { id: 5, title: 'Branch Interior', category: 'branches', description: 'Modern banking facilities at our branch', image: '/images/gallery/branch_2.jpg' },
+    { id: 6, title: 'Customer Service', category: 'branches', description: 'Dedicated customer service counters', image: '/images/gallery/branch_3.jpg' },
+    { id: 7, title: 'Best Bank Award', category: 'awards', description: 'Receiving prestigious cooperative bank award', image: '/images/gallery/award_1.jpg' },
+    { id: 8, title: 'Excellence Award', category: 'awards', description: 'Recognition for outstanding banking services', image: '/images/gallery/award_2.jpg' },
+    { id: 9, title: 'Financial Literacy Camp', category: 'community', description: 'Educating rural communities about banking', image: '/images/gallery/community_1.jpg' },
+    { id: 10, title: 'Tree Plantation Drive', category: 'community', description: 'Environmental initiative by bank employees', image: '/images/gallery/community_2.jpg' },
+    { id: 11, title: 'Blood Donation Camp', category: 'community', description: 'Corporate social responsibility initiative', image: '/images/gallery/community_3.jpg' },
+    { id: 12, title: 'Community Outreach', category: 'community', description: 'Engaging with local communities', image: '/images/gallery/community_3.jpg' }
   ];
 
-  const filteredGallery = selectedCategory === 'all' 
-    ? gallery 
-    : gallery.filter(item => item.category === selectedCategory);
+  const filteredGallery = selectedCategory === 'all'
+    ? galleryItems
+    : galleryItems.filter(item => item.category === selectedCategory);
 
   return (
     <div className="space-y-8">
@@ -109,12 +37,10 @@ const Gallery = () => {
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Gallery</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           Explore our journey through these memorable moments that showcase our commitment to excellence, 
-          community service, and innovation in banking. From award ceremonies to community initiatives, 
-          each image tells a story of our dedication to serving our customers.
+          community service, and innovation in banking.
         </p>
       </div>
 
-      {/* Category Filter */}
       <Card>
         <CardContent>
           <div className="flex flex-wrap gap-2">
@@ -135,12 +61,19 @@ const Gallery = () => {
         </CardContent>
       </Card>
 
-      {/* Gallery Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredGallery.map((item) => (
           <Card key={item.id} className="overflow-hidden group cursor-pointer">
-            <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-6xl group-hover:scale-105 transition-transform duration-300">
-              {item.image}
+            <div className="aspect-square bg-gray-100 overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-4xl text-gray-400">📷</div>';
+                }}
+              />
             </div>
             <CardContent className="p-4">
               <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
@@ -155,7 +88,6 @@ const Gallery = () => {
         ))}
       </div>
 
-      {/* Featured Moments */}
       <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
         <CardHeader>
           <CardTitle>Featured Moments</CardTitle>
@@ -163,50 +95,34 @@ const Gallery = () => {
         <CardContent>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="text-4xl mb-3">🏆</div>
+              <img
+                src="/images/gallery/featured.jpg"
+                alt="Featured"
+                className="w-24 h-24 object-cover rounded-full mx-auto mb-3"
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
               <h4 className="font-semibold text-gray-900 mb-2">Award Excellence</h4>
               <p className="text-sm text-gray-600">
-                Recognized nationally for our outstanding banking services and customer satisfaction
+                Recognized for outstanding banking services and customer satisfaction
               </p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-3">🌱</div>
+              <div className="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-3xl">🌱</span>
+              </div>
               <h4 className="font-semibold text-gray-900 mb-2">Community Impact</h4>
               <p className="text-sm text-gray-600">
-                Making a difference in the community through various social initiatives
+                Making a difference through various social initiatives
               </p>
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-3">🚀</div>
+              <div className="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-3xl">🚀</span>
+              </div>
               <h4 className="font-semibold text-gray-900 mb-2">Digital Innovation</h4>
               <p className="text-sm text-gray-600">
-                Leading the way in digital banking transformation and customer experience
+                Leading the way in digital banking transformation
               </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Video Section */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Bank in Action</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">🎬</div>
-                <p className="text-gray-600 font-medium">Bank Introduction Video</p>
-                <p className="text-sm text-gray-500">Learn about our services and values</p>
-              </div>
-            </div>
-            <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">📹</div>
-                <p className="text-gray-600 font-medium">Customer Testimonials</p>
-                <p className="text-sm text-gray-500">Hear from our satisfied customers</p>
-              </div>
             </div>
           </div>
         </CardContent>

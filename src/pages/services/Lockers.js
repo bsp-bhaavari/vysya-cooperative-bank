@@ -1,9 +1,96 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Lock, Shield, Clock, CheckCircle, ArrowRight, AlertCircle } from 'lucide-react';
+import { Lock, Shield, Clock, CheckCircle, ArrowRight, AlertCircle, Search } from 'lucide-react';
 import Card, { CardHeader, CardTitle, CardContent } from '../../components/Card';
 
+const branchData = [
+  {
+    name: 'Head Office',
+    lockers: [
+      { size: '4.5 X 6', advance: 6000, rent: 400 },
+      { size: '7 x 9.5', advance: 10000, rent: 500 },
+      { size: '4.5 X 12', advance: 14000, rent: 1000 },
+      { size: '7 x 20', advance: 14000, rent: 1000 },
+      { size: '9 X 12', advance: 14000, rent: 1000 },
+      { size: '10.5 x 13', advance: 18000, rent: 2000 },
+      { size: '15 x 20', advance: 30000, rent: 3000 },
+    ]
+  },
+  {
+    name: 'APMC Tumakuru',
+    lockers: [
+      { size: '10.5 x 13', advance: 18000, rent: 2000 },
+      { size: '15 x 21', advance: 30000, rent: 3000 },
+      { size: '25 X 20', advance: 50000, rent: 4000 },
+    ]
+  },
+  {
+    name: 'SIT Tumakuru',
+    lockers: [
+      { size: '10.5 x 13', advance: 18000, rent: 2000 },
+      { size: '15 x 21', advance: 30000, rent: 3000 },
+      { size: '25 X 20', advance: 50000, rent: 4000 },
+    ]
+  },
+  {
+    name: 'Pavagada',
+    lockers: [
+      { size: '6 x 7.5', advance: 6000, rent: 400 },
+      { size: '7 x 9.5', advance: 10000, rent: 500 },
+      { size: '6 x 16', advance: 14000, rent: 1000 },
+      { size: '7 x 20', advance: 14000, rent: 1000 },
+      { size: '12 x 7.5', advance: 14000, rent: 1000 },
+      { size: '10.5 x 13', advance: 18000, rent: 2000 },
+      { size: '12 x 16', advance: 18000, rent: 2000 },
+      { size: '15.5 x 20', advance: 30000, rent: 3000 },
+    ]
+  },
+  {
+    name: 'Madhugiri',
+    lockers: [
+      { size: '6 x 7.5', advance: 6000, rent: 400 },
+      { size: '7 x 9.5', advance: 10000, rent: 500 },
+      { size: '6 X 16', advance: 14000, rent: 1000 },
+      { size: '7 x 20', advance: 14000, rent: 1000 },
+      { size: '10.5 x 13', advance: 18000, rent: 2000 },
+      { size: '12 x 16', advance: 18000, rent: 2000 },
+      { size: '15 X 20', advance: 30000, rent: 3000 },
+    ]
+  },
+  {
+    name: 'APMC Bengaluru',
+    lockers: [
+      { size: '6 x 8', advance: 6000, rent: 400 },
+      { size: '5 x 15', advance: 14000, rent: 1000 },
+      { size: '12 x 8', advance: 14000, rent: 1000 },
+      { size: '11 x 15', advance: 18000, rent: 2000 },
+    ]
+  },
+  {
+    name: 'BVK Bengaluru',
+    lockers: [
+      { size: '15 x 21', advance: 30000, rent: 3000 },
+      { size: '25 X 20', advance: 50000, rent: 4000 },
+    ]
+  },
+  {
+    name: 'Mysore',
+    lockers: [
+      { size: '6 X 8', advance: 6000, rent: 400 },
+      { size: '7.6 X 10', advance: 10000, rent: 500 },
+      { size: '6 X 17', advance: 14000, rent: 1000 },
+      { size: '7.6 X 20.6', advance: 14000, rent: 1000 },
+      { size: '12 X 8', advance: 14000, rent: 1000 },
+      { size: '11 X 14', advance: 18000, rent: 2000 },
+      { size: '12 x 16', advance: 18000, rent: 2000 },
+      { size: '15.6 X 21', advance: 30000, rent: 3000 },
+    ]
+  }
+];
+
 const Lockers = () => {
+  const [searchBranch, setSearchBranch] = useState('');
+
   const features = [
     'Advanced security systems',
     '24/7 CCTV surveillance',
@@ -13,37 +100,6 @@ const Lockers = () => {
     'Individual locker keys',
     'Nomination facility',
     'Flexible rental options'
-  ];
-
-  const lockerTypes = [
-    {
-      size: 'Small',
-      dimensions: '6" x 5" x 18"',
-      suitableFor: 'Jewelry, documents, cash',
-      annualRent: '₹1,000',
-      deposit: '₹2,000'
-    },
-    {
-      size: 'Medium',
-      dimensions: '10" x 10" x 18"',
-      suitableFor: 'Documents, jewelry, small valuables',
-      annualRent: '₹2,000',
-      deposit: '₹3,000'
-    },
-    {
-      size: 'Large',
-      dimensions: '15" x 15" x 18"',
-      suitableFor: 'Documents, jewelry, medium valuables',
-      annualRent: '₹3,000',
-      deposit: '₹5,000'
-    },
-    {
-      size: 'Extra Large',
-      dimensions: '20" x 20" x 18"',
-      suitableFor: 'Large documents, valuables, files',
-      annualRent: '₹5,000',
-      deposit: '₹8,000'
-    }
   ];
 
   const benefits = [
@@ -73,6 +129,10 @@ const Lockers = () => {
     'Identity verification'
   ];
 
+  const filteredBranches = branchData.filter(b =>
+    b.name.toLowerCase().includes(searchBranch.toLowerCase())
+  );
+
   return (
     <div className="space-y-8">
       <div className="flex items-center space-x-4 mb-6">
@@ -86,8 +146,8 @@ const Lockers = () => {
       </div>
 
       <p className="text-lg text-gray-600 leading-relaxed">
-        Keep your valuables safe and secure with our bank locker facility. We offer various sizes 
-        of lockers with advanced security features, 24/7 surveillance, and complete privacy for 
+        Keep your valuables safe and secure with our bank locker facility. We offer various sizes
+        of lockers with advanced security features, 24/7 surveillance, and complete privacy for
         your peace of mind.
       </p>
 
@@ -151,29 +211,48 @@ const Lockers = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Locker Types & Charges</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {(lockerTypes || []).map((locker, index) => (
-            <Card key={index} className="text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Branch Wise Revised Locker Rent List - 2023</h2>
+        <p className="text-gray-600 mb-4">GST included in the revised rent amounts.</p>
+
+        <div className="relative mb-6">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search branch..."
+            value={searchBranch}
+            onChange={(e) => setSearchBranch(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          />
+        </div>
+
+        <div className="grid gap-6">
+          {filteredBranches.map((branch, bIdx) => (
+            <Card key={bIdx}>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold text-primary-700">{branch.name}</CardTitle>
+              </CardHeader>
               <CardContent>
-                <h3 className="text-xl font-bold text-primary-600 mb-2">{locker.size}</h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <p className="text-gray-500">Dimensions</p>
-                    <p className="font-medium text-gray-900">{locker.dimensions}</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-500">Suitable For</p>
-                    <p className="font-medium text-gray-900">{locker.suitableFor}</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-500">Annual Rent</p>
-                    <p className="font-semibold text-primary-600">{locker.annualRent}</p>
-                  </div>
-                  <div>
-                    <p className="text-gray-500">Security Deposit</p>
-                    <p className="font-semibold text-gray-900">{locker.deposit}</p>
-                  </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-200">
+                        <th className="text-left py-2 px-3 font-semibold text-gray-700">Sl. No.</th>
+                        <th className="text-left py-2 px-3 font-semibold text-gray-700">Locker Size</th>
+                        <th className="text-right py-2 px-3 font-semibold text-gray-700">Advance Amount</th>
+                        <th className="text-right py-2 px-3 font-semibold text-gray-700">Revised Rent (incl. GST)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {branch.lockers.map((locker, lIdx) => (
+                        <tr key={lIdx} className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-2 px-3 text-gray-600">{lIdx + 1}</td>
+                          <td className="py-2 px-3 font-medium text-gray-900">{locker.size}</td>
+                          <td className="py-2 px-3 text-right text-gray-700">₹{locker.advance.toLocaleString('en-IN')}</td>
+                          <td className="py-2 px-3 text-right font-semibold text-primary-600">₹{locker.rent.toLocaleString('en-IN')}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </CardContent>
             </Card>
@@ -253,7 +332,7 @@ const Lockers = () => {
                 <span className="text-blue-600 text-xs font-bold">!</span>
               </div>
               <p className="text-gray-700">
-                The bank is not responsible for the contents of the locker. Locker facility is provided 
+                The bank is not responsible for the contents of the locker. Locker facility is provided
                 only for safe custody of valuables.
               </p>
             </div>
@@ -281,7 +360,7 @@ const Lockers = () => {
         <CardContent className="text-center py-8">
           <h3 className="text-2xl font-bold mb-4">Secure Your Valuables Today</h3>
           <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-            Visit your nearest branch to book a locker or contact our customer service for more information. 
+            Visit your nearest branch to book a locker or contact our customer service for more information.
             Protect your precious valuables with our secure locker facility.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">

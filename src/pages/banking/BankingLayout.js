@@ -20,6 +20,7 @@ import NsclLoan from './loans/NsclLoan';
 import LicPolicyLoan from './loans/LicPolicyLoan';
 import VasaviHousingLoan from './loans/VasaviHousingLoan';
 import KannikaHousingLoan from './loans/KannikaHousingLoan';
+import HousingLoan from './loans/HousingLoan';
 import MachineryLoan from './loans/MachineryLoan';
 import GoldLoan from './loans/GoldLoan';
 import SriLakshmiCashCredit from './loans/SriLakshmiCashCredit';
@@ -60,6 +61,7 @@ const BankingLayout = () => {
         { name: 'Vasavi Vehicle Loan', path: '/banking/loans/vasavi-vehicle-loan' },
         { name: 'NSCL Loan', path: '/banking/loans/nscl-loan' },
         { name: 'LIC Policy Loan', path: '/banking/loans/lic-policy-loan' },
+        { name: 'General Housing Loan', path: '/banking/loans/housing-loan' },
         { name: 'Vasavi Housing Loan', path: '/banking/loans/vasavi-housing-loan' },
         { name: 'Kannika Housing Loan', path: '/banking/loans/kannika-housing-loan' },
         { name: 'Machinery Loan', path: '/banking/loans/machinery-loan' },
@@ -107,6 +109,7 @@ const BankingLayout = () => {
                 <Route path="loans/vasavi-vehicle-loan" element={<VasaviVehicleLoan />} />
                 <Route path="loans/nscl-loan" element={<NsclLoan />} />
                 <Route path="loans/lic-policy-loan" element={<LicPolicyLoan />} />
+                <Route path="loans/housing-loan" element={<HousingLoan />} />
                 <Route path="loans/vasavi-housing-loan" element={<VasaviHousingLoan />} />
                 <Route path="loans/kannika-housing-loan" element={<KannikaHousingLoan />} />
                 <Route path="loans/machinery-loan" element={<MachineryLoan />} />

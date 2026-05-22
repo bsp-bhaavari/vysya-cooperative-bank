@@ -3,69 +3,52 @@ import Table from '../../components/Table';
 import Card, { CardHeader, CardTitle, CardContent } from '../../components/Card';
 
 const Charges = () => {
+  const commissionCharges = [
+    ['Pay Order / DD Commission - Up to Rs.1 Lakh', '0.15% + GST', 'Per Transaction'],
+    ['Pay Order / DD Commission - Above Rs.1 Lakh', '0.1% + GST', 'Per Transaction']
+  ];
+
+  const rtgsCharges = [
+    ['Up to Rs.1 Lakh', 'Rs.15 + GST = 17.70', 'Per Transaction'],
+    ['Rs.1 Lakh to Rs.5 Lakh', 'Rs.30 + GST = 35.40', 'Per Transaction'],
+    ['Rs.5 Lakh to Rs.10 Lakh', 'Rs.40 + GST = 47.20', 'Per Transaction'],
+    ['Above Rs.10 Lakhs', 'Rs.110 + GST = 129.80', 'Per Transaction'],
+    ['GST Payment', 'Rs.50 + GST = 59.00', 'Per Transaction'],
+    ['ITD Payment', 'Rs.100 + GST = 118.00', 'Per Transaction']
+  ];
+
   const accountCharges = [
-    ['Savings Account - Minimum Balance (Non-maintenance)', '₹100', 'Monthly'],
-    ['Current Account - Minimum Balance (Non-maintenance)', '₹500', 'Monthly'],
-    ['Cheque Book - 20 Leaves', '₹50', 'Per Book'],
-    ['Cheque Book - Additional Leaves', '₹2', 'Per Leaf'],
-    ['Passbook - First Issue', 'Free', 'One Time'],
-    ['Passbook - Reprint', '₹100', 'Per Book'],
-    ['Account Statement - Physical Copy', '₹25', 'Per Statement'],
-    ['Account Statement - Email', 'Free', 'Unlimited'],
-    ['Stop Payment', '₹50', 'Per Instrument'],
-    ['Duplicate Statement', '₹100', 'Per Request']
+    ['SB A/C Closing Charges', 'Rs.250 + GST = 295.00', 'One Time'],
+    ['CA A/C Closing Charges', 'Rs.500 + GST = 590.00', 'One Time'],
+    ['Cheque Book - Per Leaf', 'Rs.3.50 + GST = 4.13', 'Per Leaf'],
+    ['Cheque Book - SB, CA, CC', 'Rs.3.50 + GST = 4.13', 'Per Leaf'],
+    ['Duplicate Pass Book Charges', 'Rs.100 + GST = 118', 'Per Book'],
+    ['A/C Pass Sheet - First Time', 'No Charges', 'Free'],
+    ['A/C Pass Sheet - Second Time', 'Rs.5 + GST = 5.90', 'Per Sheet']
   ];
 
-  const transactionCharges = [
-    ['Cash Deposit - Same Branch', 'Free', 'Unlimited'],
-    ['Cash Deposit - Other Branch', '₹2 per ₹1000', 'Min ₹50, Max ₹5000'],
-    ['Cash Withdrawal - Same Branch', 'Free', 'Up to ₹50,000/day'],
-    ['Cash Withdrawal - Other Branch', '₹2 per ₹1000', 'Min ₹50, Max ₹5000'],
-    ['NEFT - Online', 'Free', 'Unlimited'],
-    ['NEFT - Branch', '₹2.5 + GST', 'Per Transaction'],
-    ['RTGS - Online', 'Free', 'Unlimited'],
-    ['RTGS - Branch', '₹5 + GST', 'Per Transaction'],
-    ['IMPS - Online', 'Free', 'Up to 5 transactions/day'],
-    ['IMPS - Additional', '₹5 + GST', 'Per Transaction']
+  const clearingCharges = [
+    ['Clearing O/W & I/W Return Charges', 'Rs.500 including GST', 'Per Cheque'],
+    ['Cheque Stop Payment', 'Rs.100 + GST = 118', 'Per Leaf'],
+    ['Pay Order Cancellation', 'Rs.100 + GST = 118', 'Per Pay Order']
   ];
 
-  const cardCharges = [
-    ['Debit Card - Annual Fee - Classic', 'Free', 'Per Year'],
-    ['Debit Card - Annual Fee - Gold', '₹200', 'Per Year'],
-    ['Debit Card - Annual Fee - Platinum', '₹500', 'Per Year'],
-    ['Debit Card - Replacement', '₹100', 'Per Card'],
-    ['ATM Withdrawal - Own Bank', 'Free', '5 transactions/month'],
-    ['ATM Withdrawal - Other Bank', '₹20', 'After 5 transactions/month'],
-    ['ATM Balance Inquiry - Other Bank', '₹8', 'After 5 transactions/month'],
-    ['International Transaction', '3.5%', 'Per Transaction'],
-    ['Card Hotlisting', 'Free', 'One Time'],
-    ['Emergency Card Replacement', '₹200', 'Per Card']
+  const cashCharges = [
+    ['Cash Deposit to Current/Savings account (other business) - Above Rs.5 Lakhs', 'Rs.50 + GST per Lakh = 59', 'Per Lakh'],
+    ['Cash deposit up to Rs.5 lakhs to any account per day', 'Exemption of charges', ''],
+    ['Cash deposit to accounts for making Term deposits', 'Exemption of charges', ''],
+    ['Cash deposit to any loan account', 'Exemption of charges', '']
   ];
 
-  const loanCharges = [
-    ['Loan Processing Fee', '0.5% - 2%', 'Of Loan Amount'],
-    ['Loan Prepayment Charges', '2% - 4%', 'Of Outstanding Amount'],
-    ['Loan Late Payment Charges', '2% p.m.', 'On Overdue Amount'],
-    ['Loan Statement', 'Free', 'Per Request'],
-    ['Loan Closure Certificate', '₹200', 'Per Certificate'],
-    ['Loan Document Return', '₹500', 'Per Request'],
-    ['Loan Rescheduling Charges', '1%', 'Of Rescheduled Amount'],
-    ['Loan Legal Charges', 'Actual Cost', 'As Applicable'],
-    ['Loan Valuation Charges', 'Actual Cost', 'As Applicable'],
-    ['Loan Insurance Premium', 'Actual Cost', 'As Applicable']
-  ];
-
-  const otherCharges = [
-    ['Locker Rent - Small Size', '₹1000', 'Per Year'],
-    ['Locker Rent - Medium Size', '₹2000', 'Per Year'],
-    ['Locker Rent - Large Size', '₡3000', 'Per Year'],
-    ['Locker - Key Replacement', '₹500', 'Per Key'],
-    ['Demand Draft', '₹50 + GST', 'Per Draft'],
-    ['Pay Order', '₹25 + GST', 'Per Order'],
-    ['SMS Alerts', '₹15', 'Per Quarter'],
-    ['Email Alerts', 'Free', 'Unlimited'],
-    ['Standing Instruction', 'Free', 'Per Instruction'],
-    ['Nomination Registration', 'Free', 'One Time']
+  const maintenanceCharges = [
+    ['SB A/C - Minimum balance Rs.1000/- Incidental Charges', 'Rs.25 + GST/Per quarter = 29.50', 'Per Quarter'],
+    ['Current A/C - Minimum Balance Rs.2000/- Incidental Charges', 'Rs.25 + GST/Per quarter = 29.50', 'Per Quarter'],
+    ['KCD Late Fee', 'Rs.15/- for Rs.1000/-', 'Per Occurrence'],
+    ['CC Renewals / Gold O.D Renewals', 'Min Rs.2000+GST or 0.05%+GST on Advance Amt whichever is Higher', 'Per Renewal'],
+    ['Medical Fund', 'Rs.1000/- (One Time Fee)', 'One Time'],
+    ['Medical Pass Book (Duplicate)', 'Rs.100 + GST = 118', 'Per Book'],
+    ['Nomination Change Charges', 'Rs.50 + GST = 59', 'Per Change'],
+    ['SMS Charges', 'Rs.0.50 + GST per Message sent/per Quarter = 0.59', 'Per Message/Quarter']
   ];
 
   return (
@@ -73,9 +56,8 @@ const Charges = () => {
       <div>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Service Charges</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
-          Transparent and competitive pricing for all our banking services. Below are the current charges 
-          applicable to various banking products and services. These charges are subject to change as per 
-          regulatory guidelines and bank policies.
+          VYSYA CO-OPERATIVE BANK LTD., TUMAKURU-572102. Charges w.e.f. 21/05/2025.
+          Transparent and competitive pricing for all our banking services.
         </p>
       </div>
 
@@ -90,7 +72,7 @@ const Charges = () => {
                 <span className="text-primary-800 text-xs font-bold">!</span>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                All charges are exclusive of GST and other applicable taxes as per government regulations.
+                All charges are inclusive/exclusive of GST and other applicable taxes as per government regulations.
               </p>
             </div>
             <div className="flex items-start space-x-3">
@@ -106,7 +88,7 @@ const Charges = () => {
                 <span className="text-primary-800 text-xs font-bold">!</span>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Some charges may be waived for premium account holders or as part of special promotional offers.
+                Above conditions not applicable to Bengaluru Branches for cash remittance charges.
               </p>
             </div>
           </div>
@@ -114,88 +96,52 @@ const Charges = () => {
       </Card>
 
       <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Pay Order / DD Commission</h2>
+        <Table
+          headers={['Service', 'Charges', 'Frequency']}
+          rows={commissionCharges}
+        />
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">RTGS Charges (5 RTGS Free per month)</h2>
+        <Table
+          headers={['Amount', 'Charges', 'Frequency']}
+          rows={rtgsCharges}
+        />
+      </div>
+
+      <div>
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Account Related Charges</h2>
-        <Table 
+        <Table
           headers={['Service', 'Charges', 'Frequency']}
           rows={accountCharges}
         />
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Transaction Charges</h2>
-        <Table 
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Clearing & Payment Charges</h2>
+        <Table
           headers={['Service', 'Charges', 'Frequency']}
-          rows={transactionCharges}
+          rows={clearingCharges}
         />
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Card Related Charges</h2>
-        <Table 
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Cash Remittance Charges</h2>
+        <Table
           headers={['Service', 'Charges', 'Frequency']}
-          rows={cardCharges}
+          rows={cashCharges}
         />
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Loan Related Charges</h2>
-        <Table 
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Account Maintenance & Other Charges</h2>
+        <Table
           headers={['Service', 'Charges', 'Frequency']}
-          rows={loanCharges}
+          rows={maintenanceCharges}
         />
       </div>
-
-      <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Other Services</h2>
-        <Table 
-          headers={['Service', 'Charges', 'Frequency']}
-          rows={otherCharges}
-        />
-      </div>
-
-      <Card className="bg-gray-50">
-        <CardHeader>
-          <CardTitle>Exemptions & Waivers</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Free Services</h4>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>• First cheque book for savings account</li>
-                <li>• NEFT/RTGS through online banking</li>
-                <li>• Email statements and alerts</li>
-                <li>• Mobile banking registration</li>
-                <li>• Nomination registration</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Special Categories</h4>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>• Senior citizens: Waiver on certain charges</li>
-                <li>• Students: Special benefits on education loans</li>
-                <li>• Priority customers: Exclusive charge waivers</li>
-                <li>• Government schemes: As per scheme guidelines</li>
-                <li>• Rural accounts: Special pricing</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Grievance Redressal</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-700 leading-relaxed">
-            If you have any concerns regarding the charges or services, please contact our customer service 
-            at <span className="font-medium">1800-123-4567</span> or email us at 
-            <span className="font-medium">support@modernbank.com</span>. We are committed to resolving 
-            your concerns promptly and efficiently.
-          </p>
-        </CardContent>
-      </Card>
     </div>
   );
 };

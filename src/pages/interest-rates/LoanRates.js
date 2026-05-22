@@ -7,21 +7,19 @@ import { interestRatesData } from '../../data/bankingData';
 const LoanRates = () => {
   const loanRates = interestRatesData.loans;
 
-  const tableHeaders = ['Loan Name', 'Interest Rate', 'Rebate', 'Net Rate'];
+  const tableHeaders = ['Type of Loan', 'After Rebate', 'Actual ROI'];
 
   const tableData = (loanRates || []).map(loan => [
     loan.loanName,
-    loan.interestRate,
-    loan.rebate,
-    loan.netRate
+    loan.afterRebate,
+    loan.actualROI
   ]);
 
   const importantNotes = [
     'Interest rates are subject to change without prior notice',
-    'Rebate is applicable for prompt repayment and good credit history',
-    'Net rate is calculated after applying rebate',
+    'Rates effective from 01-02-2026',
+    '* Rebate applicable for prompt repayment and good credit history',
     'Processing fees and other charges are extra as per bank policy',
-    'Special rates for women, senior citizens, and existing customers',
     'Rates may vary based on credit score and loan amount',
     'TDS applicable as per Income Tax Act',
     'For detailed terms and conditions, please contact branch'
@@ -32,7 +30,7 @@ const LoanRates = () => {
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-primary-900 mb-4 tracking-tight">Loan Interest Rates</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Competitive interest rates on all our loan products with special rebates for prompt repayment.
+          VYSYA CO-OPERATIVE BANK LTD., TUMKUR. Rate of Interest on Loan & Advances w.e.f 01-02-2026.
         </p>
       </div>
 
