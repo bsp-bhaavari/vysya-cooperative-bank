@@ -56,7 +56,7 @@ const BoardOfDirectors = () => {
               <img
                 src="/images/president_Govindaraju_KN_photo.jpg"
                 alt="Sri K.N.Govindaraju"
-                className="w-48 h-56 object-cover rounded-lg shadow-md mx-auto"
+                className="w-48 h-56 object-contain rounded-lg shadow-md mx-auto bg-gray-100"
               />
               <div className="text-center">
                 <h3 className="text-xl font-bold text-gray-900">Sri K.N.Govindaraju</h3>
@@ -85,7 +85,7 @@ const BoardOfDirectors = () => {
               <img
                 src="/images/vice_president_Ramamurthy_KS_photo.jpg"
                 alt="CA Ramamurthy K.S."
-                className="w-48 h-56 object-cover rounded-lg shadow-md mx-auto"
+                className="w-48 h-56 object-contain rounded-lg shadow-md mx-auto bg-gray-100"
               />
               <div className="text-center">
                 <h3 className="text-xl font-bold text-gray-900">CA Ramamurthy.K.S.</h3>
