@@ -5,13 +5,15 @@ import deafData from './DeafAccountsData';
 const DeafAccounts = () => {
   const [search, setSearch] = useState('');
 
+  const hasQuery = search.trim().length > 0;
+
   const filteredData = useMemo(() => {
-    if (!search.trim()) return deafData;
+    if (!hasQuery) return [];
     const q = search.toLowerCase();
     return deafData.filter(entry =>
       entry.toLowerCase().includes(q)
     );
-  }, [search]);
+  }, [search, hasQuery]);
 
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
@@ -31,6 +33,10 @@ const DeafAccounts = () => {
               DEAF Account Entries
             </h2>
 
+            <p className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-3">
+              List of Inoperative Accounts for More Than 10 Years
+            </p>
+
             <div className="relative mb-4">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
@@ -42,41 +48,41 @@ const DeafAccounts = () => {
               />
             </div>
 
-            <p className="text-sm text-gray-500 mb-2">
-              Showing {filteredData.length} of {deafData.length} entries
-            </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b-2 border-gray-200 bg-gray-50">
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700 whitespace-nowrap w-16">Sl. No.</th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Particulars</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredData.length === 0 ? (
-                  <tr>
-                    <td colSpan={2} className="text-center py-8 text-gray-500">
-                      No entries found matching "{search}"
-                    </td>
+          {!hasQuery ? (
+            <div className="text-center py-12">
+              <Search className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+              <p className="text-gray-500 text-lg">
+                Search using account number, name, date, or reference.
+              </p>
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-gray-200 bg-gray-50">
+                    <th className="text-left py-3 px-4 font-semibold text-gray-700 whitespace-nowrap w-16">Sl. No.</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-700">Particulars</th>
                   </tr>
-                ) : (
-                  filteredData.map((entry, index) => (
-                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                      <td className="py-2 px-4 text-gray-500 align-top whitespace-nowrap">{index + 1}</td>
-                      <td className="py-2 px-4 text-gray-700 font-mono text-xs leading-relaxed break-all">{entry}</td>
+                </thead>
+                <tbody>
+                  {filteredData.length === 0 ? (
+                    <tr>
+                      <td colSpan={2} className="text-center py-8 text-gray-500">
+                        No entries found matching "{search}"
+                      </td>
                     </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
-
-          {filteredData.length > 50 && (
-            <div className="mt-4 text-center text-sm text-gray-500">
-              Showing all {filteredData.length} matching entries
+                  ) : (
+                    filteredData.map((entry, index) => (
+                      <tr key={index} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                        <td className="py-2 px-4 text-gray-500 align-top whitespace-nowrap">{index + 1}</td>
+                        <td className="py-2 px-4 text-gray-700 font-mono text-xs leading-relaxed break-all">{entry}</td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
             </div>
           )}
         </div>

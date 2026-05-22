@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import bankLogo from '../assets/bank-logo.png';
 
 const Footer = () => {
@@ -22,13 +22,6 @@ const Footer = () => {
     { name: 'SMS Alerts', path: '/services/sms-alerts' },
   ];
 
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-  ];
-
   return (
     <footer className="relative bg-gradient-to-b from-primary-950 via-trust-950 to-primary-950 text-white overflow-hidden border-t-4 border-primary-500">
       <div className="pointer-events-none absolute inset-0 pattern-dots opacity-[0.35]" aria-hidden />
@@ -47,18 +40,7 @@ const Footer = () => {
               <p className="text-primary-100/85 text-sm leading-relaxed">
                 Your trusted financial partner committed to providing secure and innovative banking solutions for our community.
               </p>
-              <div className="flex space-x-3">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-primary-800/70 rounded-lg flex items-center justify-center border border-trust-700/40 hover:bg-trust-600 hover:border-trust-400 transition-all duration-300 hover:-translate-y-0.5 shadow-sm"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-gold-200" />
-                  </a>
-                ))}
-              </div>
+
             </div>
 
             <div>
@@ -104,17 +86,19 @@ const Footer = () => {
               <div className="space-y-3 mt-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span className="text-primary-100/85 text-sm">+91 12345 67890</span>
+                  <span className="text-primary-100/85 text-sm">0816-2279934</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span className="text-primary-100/85 text-sm">info@modernbank.com</span>
+                  <a href="mailto:info@vcbltkr.bank.in" className="text-primary-100/85 text-sm hover:text-gold-300 transition-colors duration-200">info@vcbltkr.bank.in</a>
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-4 h-4 text-gold-400 mt-1 shrink-0" />
                   <span className="text-primary-100/85 text-sm">
-                    123 Banking Street, Financial District,<br />
-                    City - 123456, India
+                    VYSYA CO-OPERATIVE BANK LTD.<br />
+                    Administrative Office, 2nd Floor<br />
+                    Dr. Sri Sri Shivakumara Swamiji Circle<br />
+                    BH Road, Tumkur - 572102
                   </span>
                 </div>
               </div>

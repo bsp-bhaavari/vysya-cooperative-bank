@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.175711f7.css",
-    "main.js": "/static/js/main.ada44590.js",
-    "static/media/bank-logo.png": "/static/media/bank-logo.57aa7d84fe0f121b8fea.png",
-    "index.html": "/index.html",
-    "main.175711f7.css.map": "/static/css/main.175711f7.css.map",
-    "main.ada44590.js.map": "/static/js/main.ada44590.js.map"
+    "main.css": "/vysya-cooperative-bank/static/css/main.9e43a542.css",
+    "main.js": "/vysya-cooperative-bank/static/js/main.871a5f60.js",
+    "static/media/bank-logo.png": "/vysya-cooperative-bank/static/media/bank-logo.57aa7d84fe0f121b8fea.png",
+    "index.html": "/vysya-cooperative-bank/index.html",
+    "main.9e43a542.css.map": "/vysya-cooperative-bank/static/css/main.9e43a542.css.map",
+    "main.871a5f60.js.map": "/vysya-cooperative-bank/static/js/main.871a5f60.js.map"
   },
   "entrypoints": [
-    "static/css/main.175711f7.css",
-    "static/js/main.ada44590.js"
+    "static/css/main.9e43a542.css",
+    "static/js/main.871a5f60.js"
   ]
 }
