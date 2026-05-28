@@ -5,7 +5,7 @@ const VisionMission = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Vision & Mission</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Vision & Mission</h1>
       </div>
 
       <Card>

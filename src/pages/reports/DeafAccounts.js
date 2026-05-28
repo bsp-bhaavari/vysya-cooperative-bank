@@ -19,7 +19,7 @@ const DeafAccounts = () => {
     <div className="pt-16 min-h-screen bg-gray-50">
       <div className="container-max py-12">
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-trust-900 mb-4">
             DEAF Accounts
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -29,7 +29,7 @@ const DeafAccounts = () => {
 
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-trust-900 mb-4">
               DEAF Account Entries
             </h2>
 
@@ -44,7 +44,7 @@ const DeafAccounts = () => {
                 placeholder="Search by account number, name, date, reference..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                className="form-input pl-10"
               />
             </div>
 

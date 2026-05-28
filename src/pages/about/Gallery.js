@@ -34,7 +34,7 @@ const Gallery = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Gallery</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Gallery</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           Explore our journey through these memorable moments that showcase our commitment to excellence, 
           community service, and innovation in banking.
@@ -50,7 +50,7 @@ const Gallery = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedCategory === category.id
-                    ? 'bg-primary-600 text-white'
+                    ? 'bg-trust-900 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -76,10 +76,10 @@ const Gallery = () => {
               />
             </div>
             <CardContent className="p-4">
-              <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
+              <h3 className="font-semibold text-trust-900 mb-1">{item.title}</h3>
               <p className="text-sm text-gray-600 line-clamp-2">{item.description}</p>
               <div className="mt-2">
-                <span className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded-full">
+                  <span className="text-xs bg-trust-100 text-trust-800 px-2 py-1 rounded-full">
                   {categories.find(c => c.id === item.category)?.name}
                 </span>
               </div>
@@ -88,7 +88,7 @@ const Gallery = () => {
         ))}
       </div>
 
-      <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
+      <Card className="bg-gradient-to-r from-trust-50/50 to-gold-50/50">
         <CardHeader>
           <CardTitle>Featured Moments</CardTitle>
         </CardHeader>
@@ -101,25 +101,25 @@ const Gallery = () => {
                 className="w-24 h-24 object-cover rounded-full mx-auto mb-3"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
-              <h4 className="font-semibold text-gray-900 mb-2">Award Excellence</h4>
+              <h4 className="font-semibold text-trust-900 mb-2">Award Excellence</h4>
               <p className="text-sm text-gray-600">
                 Recognized for outstanding banking services and customer satisfaction
               </p>
             </div>
             <div className="text-center">
-              <div className="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="w-24 h-24 bg-trust-50/50 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-3xl">🌱</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Community Impact</h4>
+              <h4 className="font-semibold text-trust-900 mb-2">Community Impact</h4>
               <p className="text-sm text-gray-600">
                 Making a difference through various social initiatives
               </p>
             </div>
             <div className="text-center">
-              <div className="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <div className="w-24 h-24 bg-trust-50/50 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-3xl">🚀</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Digital Innovation</h4>
+              <h4 className="font-semibold text-trust-900 mb-2">Digital Innovation</h4>
               <p className="text-sm text-gray-600">
                 Leading the way in digital banking transformation
               </p>

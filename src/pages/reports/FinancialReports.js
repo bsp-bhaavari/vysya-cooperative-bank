@@ -29,29 +29,29 @@ const FinancialReports = () => {
       <div className="container-max py-12">
         <div className="space-y-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Financial Reports</h1>
+            <h1 className="text-3xl font-bold text-trust-900 mb-4">Financial Reports</h1>
             <p className="text-lg text-gray-600 leading-relaxed">
               Access our comprehensive financial reports including balance sheets 
               and regulatory disclosures.
             </p>
           </div>
 
-          <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
+          <Card className="bg-gradient-to-r from-trust-50/50 to-gold-50/50">
             <CardHeader>
               <CardTitle>Our Journey</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">48+</div>
+                  <div className="text-3xl font-bold text-trust-600 mb-2">48+</div>
                   <p className="text-gray-600">Years of Service</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-secondary-600 mb-2">1 AO + 8</div>
+                  <div className="text-3xl font-bold text-gold-600 mb-2">1 AO + 8</div>
                   <p className="text-gray-600">Branches Across Tumkur, Bangalore, Mysuru District</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-2">25000+</div>
+                  <div className="text-3xl font-bold text-trust-600 mb-2">25000+</div>
                   <p className="text-gray-600">Customers Trusting with us</p>
                 </div>
               </div>
@@ -59,16 +59,16 @@ const FinancialReports = () => {
           </Card>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Balance Sheets</h2>
+            <h2 className="text-2xl font-bold text-trust-900 mb-6">Balance Sheets</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {balanceSheets.map((bs, index) => (
                 <Card key={index} className="hover:shadow-premium-sm transition-all duration-300 group">
                   <CardContent>
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
-                        <FileText className="w-8 h-8 text-primary-600" />
+                      <div className="w-16 h-16 bg-gradient-to-br from-trust-100 to-trust-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
+                        <FileText className="w-8 h-8 text-trust-600" />
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{bs.title}</h3>
+                      <h3 className="text-lg font-semibold text-trust-900 mb-2">{bs.title}</h3>
                       <p className="text-sm text-gray-600 mb-4">{bs.description}</p>
                       <div className="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-4">
                         <Calendar className="w-4 h-4" />
@@ -77,7 +77,7 @@ const FinancialReports = () => {
                       <a
                         href={bs.file}
                         download
-                        className="inline-flex items-center space-x-2 bg-primary-600 text-white px-5 py-2.5 rounded-lg hover:bg-primary-700 transition-all duration-300 shadow-md hover:-translate-y-0.5"
+                        className="inline-flex items-center space-x-2 bg-trust-600 text-white px-5 py-2.5 rounded-lg hover:bg-trust-700 transition-all duration-300 shadow-md hover:-translate-y-0.5"
                       >
                         <Download className="w-4 h-4" />
                         <span>Download</span>
@@ -96,7 +96,7 @@ const FinancialReports = () => {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">RBI Requirements</h4>
+                  <h4 className="font-semibold text-trust-900 mb-3">RBI Requirements</h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Basel III Disclosure</li>
                     <li>• Asset Quality Review</li>
@@ -106,7 +106,7 @@ const FinancialReports = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Other Disclosures</h4>
+                  <h4 className="font-semibold text-trust-900 mb-3">Other Disclosures</h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Corporate Governance Report</li>
                     <li>• Business Responsibility Report</li>
@@ -119,31 +119,31 @@ const FinancialReports = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-primary-50">
+          <Card className="bg-trust-50/50">
             <CardHeader>
               <CardTitle>Important Information</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">!</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">!</span>
                   </div>
                   <p className="text-gray-700">
                     All financial reports are audited by independent auditors and approved by the Board of Directors.
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">!</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">!</span>
                   </div>
                   <p className="text-gray-700">
                     Reports are prepared in accordance with Indian Accounting Standards (Ind AS) and RBI guidelines.
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">!</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">!</span>
                   </div>
                   <p className="text-gray-700">
                     For any queries regarding financial reports, please contact our administrative office.

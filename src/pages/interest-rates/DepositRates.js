@@ -27,7 +27,7 @@ const DepositRates = () => {
   return (
     <div className="space-y-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-primary-900 mb-4 tracking-tight">Deposit Interest Rates</h1>
+        <h1 className="text-4xl font-bold text-trust-900 mb-4 tracking-tight">Deposit Interest Rates</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Attractive interest rates on all our deposit products with special benefits for senior citizens and long-term deposits.
         </p>
@@ -48,14 +48,14 @@ const DepositRates = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-gradient-to-br from-secondary-50/90 to-surface-tint border-l-4 border-gold-500 border border-primary-100/80">
+      <Card className="bg-gradient-to-br from-gold-50/50 to-surface-tint border-l-4 border-gold-500 border border-gray-100">
         <CardHeader>
           <CardTitle>Special Benefits</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-primary-900 mb-3">Senior Citizen Benefits</h4>
+              <h4 className="font-semibold text-trust-900 mb-3">Senior Citizen Benefits</h4>
               <ul className="space-y-2 text-sm text-gray-700 leading-relaxed">
                 <li>• Additional 0.50% interest on deposits above 1 year</li>
                 <li>• Priority service at all branches</li>
@@ -64,7 +64,7 @@ const DepositRates = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-primary-900 mb-3">Long-Term Deposit Benefits</h4>
+              <h4 className="font-semibold text-trust-900 mb-3">Long-Term Deposit Benefits</h4>
               <ul className="space-y-2 text-sm text-gray-700 leading-relaxed">
                 <li>• Higher rates for deposits above 1 year</li>
                 <li>• Loan facility against deposit up to 85%</li>
@@ -76,7 +76,7 @@ const DepositRates = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-surface-tint border-l-4 border-primary-700 border border-primary-100/80">
+      <Card className="bg-surface-tint border-l-4 border-trust-700 border border-gray-100">
         <CardHeader>
           <CardTitle>Important Information</CardTitle>
         </CardHeader>
@@ -92,17 +92,17 @@ const DepositRates = () => {
         </CardContent>
       </Card>
 
-      <div className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-trust-950 text-white rounded-xl p-8 text-center border border-trust-800/40 shadow-premium-sm">
-        <div className="pointer-events-none absolute inset-0 pattern-dots opacity-15" aria-hidden />
+      <div className="relative overflow-hidden bg-gradient-to-br from-trust-800 via-trust-900 to-trust-950 text-white rounded-xl p-8 text-center border border-trust-800/40 shadow-premium">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-trust-950/30 to-transparent" aria-hidden />
         <div className="relative">
           <h2 className="text-3xl font-bold mb-4 tracking-tight">Start Saving Today</h2>
-          <p className="text-xl mb-6 text-primary-100/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-6 text-trust-200/90 max-w-2xl mx-auto">
             Open a deposit account with us and enjoy competitive rates with secure banking
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
               to="/contact" 
-              className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
+              className="bg-trust-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-trust-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
             >
               Open Deposit Account
             </Link>

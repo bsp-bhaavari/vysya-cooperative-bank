@@ -28,7 +28,7 @@ const LoanRates = () => {
   return (
     <div className="space-y-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-primary-900 mb-4 tracking-tight">Loan Interest Rates</h1>
+        <h1 className="text-4xl font-bold text-trust-900 mb-4 tracking-tight">Loan Interest Rates</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           VYSYA CO-OPERATIVE BANK LTD., TUMKUR. Rate of Interest on Loan & Advances w.e.f 01-02-2026.
         </p>
@@ -49,7 +49,7 @@ const LoanRates = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-surface-tint border-l-4 border-primary-700 border border-primary-100/80">
+      <Card className="bg-surface-tint border-l-4 border-trust-700 border border-gray-100">
         <CardHeader>
           <CardTitle>Important Information</CardTitle>
         </CardHeader>
@@ -65,17 +65,17 @@ const LoanRates = () => {
         </CardContent>
       </Card>
 
-      <div className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-trust-950 text-white rounded-xl p-8 text-center border border-trust-800/40 shadow-premium-sm">
-        <div className="pointer-events-none absolute inset-0 pattern-dots opacity-15" aria-hidden />
+      <div className="relative overflow-hidden bg-gradient-to-br from-trust-800 via-trust-900 to-trust-950 text-white rounded-xl p-8 text-center border border-trust-800/40 shadow-premium">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-trust-950/30 to-transparent" aria-hidden />
         <div className="relative">
           <h2 className="text-3xl font-bold mb-4 tracking-tight">Need More Information?</h2>
-          <p className="text-xl mb-6 text-primary-100/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-6 text-trust-200/90 max-w-2xl mx-auto">
             Contact our loan experts for personalized interest rate quotes and special offers
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
               to="/contact" 
-              className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
+              className="bg-trust-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-trust-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
             >
               Contact Loan Expert
             </Link>

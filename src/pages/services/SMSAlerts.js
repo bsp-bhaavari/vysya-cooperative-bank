@@ -7,11 +7,11 @@ export default function SMSAlerts() {
     <div className="section-padding">
       <div className="container-max">
         <div className="flex items-center space-x-4 mb-6">
-          <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
-            <MessageSquare className="w-8 h-8 text-primary-600" />
+          <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center">
+            <MessageSquare className="w-8 h-8 text-trust-600" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">SMS Alerts</h1>
+            <h1 className="text-3xl font-bold text-trust-900">SMS Alerts</h1>
             <p className="text-gray-600">Instant SMS notifications for all transactions</p>
           </div>
         </div>
@@ -20,9 +20,9 @@ export default function SMSAlerts() {
           <CardContent>
             <div className="py-8">
               <div className="text-center mb-8">
-                <div className="inline-flex items-center bg-primary-50 border border-primary-200 rounded-xl px-6 py-4">
-                  <MessageSquare className="w-6 h-6 text-primary-600 mr-3" />
-                  <span className="text-xl font-bold text-primary-800">
+                <div className="inline-flex items-center bg-trust-50/30 border border-gray-200 rounded-xl px-6 py-4">
+                  <MessageSquare className="w-6 h-6 text-trust-600 mr-3" />
+                  <span className="text-xl font-bold text-trust-800">
                     SMS Charges Rs.0.50 + GST per message/per quarter = 0.59
                   </span>
                 </div>

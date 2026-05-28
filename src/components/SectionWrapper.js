@@ -14,7 +14,7 @@ const SectionWrapper = ({
         {(title || subtitle) && (
           <div className="text-center mb-12">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-4 tracking-tight">
                 {title}
               </h2>
             )}

@@ -29,21 +29,21 @@ const LoansOverview = () => {
   ];
 
   const cardTopColors = [
-    'border-t-primary-700',
+    'border-t-trust-700',
     'border-t-trust-600',
     'border-t-gold-500',
   ];
 
   return (
     <div className="space-y-10">
-      <div className="relative overflow-hidden rounded-xl border border-primary-100/80 bg-gradient-to-br from-white via-surface-tint/50 to-surface-muted/60 p-8 shadow-soft">
+      <div className="relative overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-white via-surface-tint/50 to-surface-muted/60 p-8 shadow-soft">
         <div className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-50" aria-hidden />
         <div className="relative">
           <div className="flex items-center gap-2 text-trust-700 font-semibold text-sm uppercase tracking-wider mb-2">
             <Landmark className="w-4 h-4" />
             Lending
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-primary-900 tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-trust-900 tracking-tight mb-3">
             Our Loan Products
           </h1>
           <p className="text-gray-600 max-w-2xl leading-relaxed">
@@ -57,22 +57,22 @@ const LoansOverview = () => {
           <Link
             key={loan.path}
             to={`/banking/loans/${loan.path}`}
-            className={`group relative flex flex-col rounded-xl border border-primary-100/80 bg-card-shine shadow-soft overflow-hidden transition-all duration-300 hover:shadow-premium-sm hover:-translate-y-1 border-t-4 ${cardTopColors[index % cardTopColors.length]}`}
+            className={`group relative flex flex-col rounded-xl border border-gray-100 bg-card-shine shadow-soft overflow-hidden transition-all duration-300 hover:shadow-premium-sm hover:-translate-y-1 border-t-4 ${cardTopColors[index % cardTopColors.length]}`}
           >
             <div className="p-6 flex flex-col flex-grow">
               <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary-100 to-surface-tint border border-primary-100/90 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                  <Banknote className="w-6 h-6 text-primary-800" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-trust-50 to-surface-tint border border-gray-100 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                  <Banknote className="w-6 h-6 text-trust-800" />
                 </div>
-                <ChevronRight className="w-5 h-5 text-primary-400 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-trust-600 shrink-0 mt-1" />
+                <ChevronRight className="w-5 h-5 text-trust-400 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-trust-600 shrink-0 mt-1" />
               </div>
-              <h3 className="text-lg font-semibold text-primary-900 group-hover:text-primary-950 transition-colors">
+              <h3 className="text-lg font-semibold text-trust-900 group-hover:text-trust-950 transition-colors">
                 {loan.name}
               </h3>
               <p className="text-gray-600 text-sm mt-2 leading-relaxed flex-grow">
                 {loan.description}
               </p>
-              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary-700 group-hover:text-primary-800">
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-trust-700 group-hover:text-trust-800">
                 View details
                 <ChevronRight className="w-4 h-4 ml-1" />
               </span>

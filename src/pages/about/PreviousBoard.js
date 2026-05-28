@@ -5,7 +5,7 @@ const PreviousBoard = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Previous Board Members</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Previous Board Members</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           We honor and remember our former board members who have contributed immensely to the growth and 
           success of Vysya Co-operative Bank. Their vision, leadership, and dedication have laid the strong 
@@ -33,15 +33,15 @@ const PreviousBoard = () => {
         <CardContent>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">48+</div>
+              <div className="text-3xl font-bold text-trust-600 mb-2">48+</div>
               <p className="text-gray-600">Years of Service</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-secondary-600 mb-2">1 AO + 8</div>
+              <div className="text-3xl font-bold text-gold-600 mb-2">1 AO + 8</div>
               <p className="text-gray-600">Branches Across Tumkur, Bangalore, Mysuru</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">25000+</div>
+              <div className="text-3xl font-bold text-trust-600 mb-2">25000+</div>
               <p className="text-gray-600">Customers Trusting with us</p>
             </div>
           </div>

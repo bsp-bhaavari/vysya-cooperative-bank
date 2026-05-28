@@ -28,7 +28,7 @@ const VasavambhaOverdraftLoan = () => {
     <div className="section-padding">
       <div className="container-max">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Vasavambha Overdraft Loan</h1>
+          <h1 className="text-4xl font-bold text-trust-900 mb-4">Vasavambha Overdraft Loan</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Overdraft facility designed for Vasavambha cooperative members with 
             competitive interest rates and flexible repayment options.
@@ -44,7 +44,7 @@ const VasavambhaOverdraftLoan = () => {
               <ul className="space-y-3">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full flex-shrink-0 mt-2"></div>
+                    <div className="w-2 h-2 bg-trust-600 rounded-full flex-shrink-0 mt-2"></div>
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -60,7 +60,7 @@ const VasavambhaOverdraftLoan = () => {
               <ul className="space-y-3">
                 {eligibility.map((criteria, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-secondary-600 rounded-full flex-shrink-0 mt-2"></div>
+                    <div className="w-2 h-2 bg-gold-600 rounded-full flex-shrink-0 mt-2"></div>
                     <span className="text-gray-700">{criteria}</span>
                   </li>
                 ))}
@@ -69,11 +69,11 @@ const VasavambhaOverdraftLoan = () => {
           </Card>
         </div>
 
-        <div className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl p-8 mb-12">
+        <div className="bg-gradient-to-r from-trust-50/50 to-gold-50/50 rounded-xl p-8 mb-12">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-6">
-              <CreditCard className="w-12 h-12 text-primary-600" />
-              <h3 className="text-2xl font-bold text-gray-900">Flexible Credit</h3>
+              <CreditCard className="w-12 h-12 text-trust-600" />
+              <h3 className="text-2xl font-bold text-trust-900">Flexible Credit</h3>
             </div>
             <p className="text-lg text-gray-700 mb-6">
               Meet your business working capital needs with our flexible overdraft 
@@ -81,15 +81,15 @@ const VasavambhaOverdraftLoan = () => {
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">Flexible</div>
+                <div className="text-3xl font-bold text-trust-600 mb-2">Flexible</div>
                 <p className="text-gray-600">Limits</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">Quick</div>
+                <div className="text-3xl font-bold text-trust-600 mb-2">Quick</div>
                 <p className="text-gray-600">Approval</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">Easy</div>
+                <div className="text-3xl font-bold text-trust-600 mb-2">Easy</div>
                 <p className="text-gray-600">Access</p>
               </div>
             </div>

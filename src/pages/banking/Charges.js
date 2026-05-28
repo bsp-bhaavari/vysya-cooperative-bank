@@ -54,38 +54,38 @@ const Charges = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Service Charges</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Service Charges</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           VYSYA CO-OPERATIVE BANK LTD., TUMAKURU-572102. Charges w.e.f. 21/05/2025.
           Transparent and competitive pricing for all our banking services.
         </p>
       </div>
 
-      <Card className="bg-gradient-to-r from-surface-tint to-surface-muted/80 border-primary-100/90">
+      <Card className="bg-gradient-to-r from-surface-tint to-surface-muted/80 border-gray-100">
         <CardHeader>
           <CardTitle>Important Information</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 border border-primary-200/80">
-                <span className="text-primary-800 text-xs font-bold">!</span>
+              <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200">
+                <span className="text-trust-800 text-xs font-bold">!</span>
               </div>
               <p className="text-gray-700 leading-relaxed">
                 All charges are inclusive/exclusive of GST and other applicable taxes as per government regulations.
               </p>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 border border-primary-200/80">
-                <span className="text-primary-800 text-xs font-bold">!</span>
+              <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200">
+                <span className="text-trust-800 text-xs font-bold">!</span>
               </div>
               <p className="text-gray-700 leading-relaxed">
                 Charges are subject to revision by the bank from time to time with proper notice to customers.
               </p>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 border border-primary-200/80">
-                <span className="text-primary-800 text-xs font-bold">!</span>
+              <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200">
+                <span className="text-trust-800 text-xs font-bold">!</span>
               </div>
               <p className="text-gray-700 leading-relaxed">
                 Above conditions not applicable to Bengaluru Branches for cash remittance charges.
@@ -96,7 +96,7 @@ const Charges = () => {
       </Card>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Pay Order / DD Commission</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Pay Order / DD Commission</h2>
         <Table
           headers={['Service', 'Charges', 'Frequency']}
           rows={commissionCharges}
@@ -104,7 +104,7 @@ const Charges = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">RTGS Charges (5 RTGS Free per month)</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">RTGS Charges (5 RTGS Free per month)</h2>
         <Table
           headers={['Amount', 'Charges', 'Frequency']}
           rows={rtgsCharges}
@@ -112,7 +112,7 @@ const Charges = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Account Related Charges</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Account Related Charges</h2>
         <Table
           headers={['Service', 'Charges', 'Frequency']}
           rows={accountCharges}
@@ -120,7 +120,7 @@ const Charges = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Clearing & Payment Charges</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Clearing & Payment Charges</h2>
         <Table
           headers={['Service', 'Charges', 'Frequency']}
           rows={clearingCharges}
@@ -128,7 +128,7 @@ const Charges = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Cash Remittance Charges</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Cash Remittance Charges</h2>
         <Table
           headers={['Service', 'Charges', 'Frequency']}
           rows={cashCharges}
@@ -136,7 +136,7 @@ const Charges = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Account Maintenance & Other Charges</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Account Maintenance & Other Charges</h2>
         <Table
           headers={['Service', 'Charges', 'Frequency']}
           rows={maintenanceCharges}

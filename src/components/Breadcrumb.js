@@ -54,13 +54,13 @@ const Breadcrumb = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-surface-page via-primary-50/60 to-trust-50/50 border-b-2 border-primary-200/80 shadow-sm">
-      <div className="container-max py-3">
+    <nav className="bg-white border-b border-gray-200">
+      <div className="container-max py-3 px-4">
         <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
           <li>
             <Link
               to="/"
-              className="flex items-center space-x-1 text-primary-800 hover:text-trust-700 transition-colors duration-200 font-medium"
+              className="flex items-center space-x-1 text-trust-700 hover:text-trust-800 transition-colors duration-200 font-medium"
             >
               <Home className="w-4 h-4 text-trust-600" />
               <span>Home</span>
@@ -73,15 +73,15 @@ const Breadcrumb = () => {
             
             return (
               <li key={name} className="flex items-center space-x-2">
-                <span className="text-primary-300">/</span>
+                <span className="text-gray-300">/</span>
                 {isLast ? (
-                  <span className="text-primary-950 font-semibold">
+                  <span className="text-trust-900 font-semibold">
                     {getRouteDisplayName(routeTo, index)}
                   </span>
                 ) : (
                   <Link
                     to={routeTo}
-                    className="text-primary-800/90 hover:text-trust-700 transition-colors duration-200"
+                    className="text-gray-600 hover:text-trust-700 transition-colors duration-200"
                   >
                     {getRouteDisplayName(routeTo, index)}
                   </Link>

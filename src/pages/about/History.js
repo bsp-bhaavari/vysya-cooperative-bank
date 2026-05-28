@@ -5,7 +5,7 @@ const History = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Our History</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Our History</h1>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             Vysya Co-operative Bank Limited is a leading Urban Co-operative Bank in the State, 

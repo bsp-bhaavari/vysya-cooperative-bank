@@ -7,11 +7,11 @@ export default function QRCodePage() {
     <div className="section-padding">
       <div className="container-max">
         <div className="flex items-center space-x-4 mb-6">
-          <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
-            <QrCode className="w-8 h-8 text-primary-600" />
+          <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center">
+            <QrCode className="w-8 h-8 text-trust-600" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">QR Code Technology</h1>
+            <h1 className="text-3xl font-bold text-trust-900">QR Code Technology</h1>
             <p className="text-gray-600">Quick and easy payments using QR code technology</p>
           </div>
         </div>
@@ -19,13 +19,13 @@ export default function QRCodePage() {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <MapPin className="w-5 h-5 text-primary-600" />
+              <MapPin className="w-5 h-5 text-trust-600" />
               <span>Provider Details</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="bg-surface-tint border border-primary-100/70 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Futuretek Commerce Pvt Ltd</h3>
+            <div className="bg-surface-tint border border-gray-100 rounded-lg p-6">
+              <h3 className="font-semibold text-trust-900 mb-2">Futuretek Commerce Pvt Ltd</h3>
               <p className="text-gray-700">Road No 5, Murlipura</p>
               <p className="text-gray-700">Jaipur - 302023</p>
             </div>
@@ -58,21 +58,21 @@ export default function QRCodePage() {
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gradient-to-r from-primary-800 to-primary-700 text-white">
+                  <tr className="bg-trust-900 text-white">
                     <th className="px-6 py-3 text-left font-semibold">Service</th>
                     <th className="px-6 py-3 text-left font-semibold">Charges</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="bg-white hover:bg-primary-50 transition-colors border-b border-gray-200">
+                  <tr className="bg-white hover:bg-trust-50/60 transition-colors border-b border-gray-200">
                     <td className="px-6 py-4 font-medium text-gray-900">Static QR Code</td>
                     <td className="px-6 py-4 text-gray-700">Free</td>
                   </tr>
-                  <tr className="bg-gray-50 hover:bg-primary-50 transition-colors border-b border-gray-200">
+                  <tr className="bg-gray-50/50 hover:bg-trust-50/60 transition-colors border-b border-gray-200">
                     <td className="px-6 py-4 font-medium text-gray-900">Dynamic QR Code</td>
                     <td className="px-6 py-4 text-gray-700">Free</td>
                   </tr>
-                  <tr className="bg-white hover:bg-primary-50 transition-colors border-b border-gray-200">
+                  <tr className="bg-white hover:bg-trust-50/60 transition-colors border-b border-gray-200">
                     <td className="px-6 py-4 font-medium text-gray-900">Transaction Processing</td>
                     <td className="px-6 py-4 text-gray-700">Rs.40 + GST</td>
                   </tr>

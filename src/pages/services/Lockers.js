@@ -136,11 +136,11 @@ const Lockers = () => {
   return (
     <div className="space-y-8">
       <div className="flex items-center space-x-4 mb-6">
-        <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
-          <Lock className="w-8 h-8 text-primary-600" />
+        <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center">
+          <Lock className="w-8 h-8 text-trust-600" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Locker Facility</h1>
+          <h1 className="text-3xl font-bold text-trust-900">Locker Facility</h1>
           <p className="text-gray-600">Secure your valuables in our bank lockers</p>
         </div>
       </div>
@@ -151,26 +151,26 @@ const Lockers = () => {
         your peace of mind.
       </p>
 
-      <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
+      <Card className="bg-gradient-to-r from-trust-50/50 to-gold-50/50">
         <CardHeader>
           <CardTitle>Locker Benefits</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">4</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">4</div>
               <p className="text-gray-600">Locker Sizes</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">24/7</div>
+              <div className="text-2xl font-bold text-gold-600 mb-1">24/7</div>
               <p className="text-gray-600">Security</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">100%</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">100%</div>
               <p className="text-gray-600">Private</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">Flexible</div>
+              <div className="text-2xl font-bold text-gold-600 mb-1">Flexible</div>
               <p className="text-gray-600">Access</p>
             </div>
           </div>
@@ -178,7 +178,7 @@ const Lockers = () => {
       </Card>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Key Features</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {(features || []).map((feature, index) => (
             <div key={index} className="flex items-center space-x-3">
@@ -190,15 +190,15 @@ const Lockers = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Our Lockers</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Why Choose Our Lockers</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {(benefits || []).map((benefit, index) => (
             <Card key={index} className="text-center">
               <CardContent>
-                <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  {React.createElement(benefit.icon, { className: "w-8 h-8 text-primary-600" })}
+                <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  {React.createElement(benefit.icon, { className: "w-8 h-8 text-trust-600" })}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-trust-900 mb-3">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -211,7 +211,7 @@ const Lockers = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Branch Wise Revised Locker Rent List - 2023</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Branch Wise Revised Locker Rent List - 2023</h2>
         <p className="text-gray-600 mb-4">GST included in the revised rent amounts.</p>
 
         <div className="relative mb-6">
@@ -221,7 +221,7 @@ const Lockers = () => {
             placeholder="Search branch..."
             value={searchBranch}
             onChange={(e) => setSearchBranch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="form-input pl-10"
           />
         </div>
 
@@ -229,7 +229,7 @@ const Lockers = () => {
           {filteredBranches.map((branch, bIdx) => (
             <Card key={bIdx}>
               <CardHeader>
-                <CardTitle className="text-lg font-bold text-primary-700">{branch.name}</CardTitle>
+                <CardTitle className="text-lg font-bold text-trust-700">{branch.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="overflow-x-auto">
@@ -248,7 +248,7 @@ const Lockers = () => {
                           <td className="py-2 px-3 text-gray-600">{lIdx + 1}</td>
                           <td className="py-2 px-3 font-medium text-gray-900">{locker.size}</td>
                           <td className="py-2 px-3 text-right text-gray-700">₹{locker.advance.toLocaleString('en-IN')}</td>
-                          <td className="py-2 px-3 text-right font-semibold text-primary-600">₹{locker.rent.toLocaleString('en-IN')}</td>
+                          <td className="py-2 px-3 text-right font-semibold text-trust-600">₹{locker.rent.toLocaleString('en-IN')}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -268,7 +268,7 @@ const Lockers = () => {
           <CardContent>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Eligibility Criteria</h4>
+                <h4 className="font-semibold text-trust-900 mb-3">Eligibility Criteria</h4>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li>• Individual customers (singly/jointly)</li>
                   <li>• HUFs, Partnership firms, Companies</li>
@@ -278,7 +278,7 @@ const Lockers = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Documents Required</h4>
+                <h4 className="font-semibold text-trust-900 mb-3">Documents Required</h4>
                 <ul className="space-y-2 text-sm text-gray-700">
                   {(documents || []).map((doc, index) => (
                     <li key={index}>• {doc}</li>
@@ -296,7 +296,7 @@ const Lockers = () => {
           <CardContent>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Access Timings</h4>
+                <h4 className="font-semibold text-trust-900 mb-3">Access Timings</h4>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li>• Monday to Friday: 10:00 AM - 4:00 PM</li>
                   <li>• Saturday: 10:00 AM - 2:00 PM</li>
@@ -305,7 +305,7 @@ const Lockers = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-3">Operating Instructions</h4>
+                <h4 className="font-semibold text-trust-900 mb-3">Operating Instructions</h4>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li>• Two keys provided (one for bank, one for customer)</li>
                   <li>• Both keys required to open locker</li>
@@ -356,18 +356,18 @@ const Lockers = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-primary-600 text-white">
+      <Card className="bg-trust-900 text-white">
         <CardContent className="text-center py-8">
           <h3 className="text-2xl font-bold mb-4">Secure Your Valuables Today</h3>
-          <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-trust-200 mb-6 max-w-2xl mx-auto">
             Visit your nearest branch to book a locker or contact our customer service for more information.
             Protect your precious valuables with our secure locker facility.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors">
+            <Link to="/contact" className="bg-white text-trust-900 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors">
               Book Locker
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-all">
+            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-trust-900 font-medium py-3 px-8 rounded-lg transition-all">
               Know More
             </Link>
           </div>

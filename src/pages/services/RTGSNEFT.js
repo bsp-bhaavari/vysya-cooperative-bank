@@ -26,11 +26,11 @@ const RTGSNEFT = () => {
   return (
     <div className="space-y-8">
       <div className="flex items-center space-x-4 mb-6">
-        <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
-          <Send className="w-8 h-8 text-primary-600" />
+        <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center">
+          <Send className="w-8 h-8 text-trust-600" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">RTGS/NEFT Services</h1>
+          <h1 className="text-3xl font-bold text-trust-900">RTGS/NEFT Services</h1>
           <p className="text-gray-600">Secure and instant fund transfer solutions</p>
         </div>
       </div>
@@ -40,26 +40,26 @@ const RTGSNEFT = () => {
         and NEFT (National Electronic Funds Transfer) services. 5 RTGS transactions free per month.
       </p>
 
-      <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
+      <Card className="bg-gradient-to-r from-trust-50/50 to-gold-50/50">
         <CardHeader>
           <CardTitle>Service Highlights</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">5 Free</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">5 Free</div>
               <p className="text-gray-600">RTGS/month</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">24/7</div>
+              <div className="text-2xl font-bold text-gold-600 mb-1">24/7</div>
               <p className="text-gray-600">Availability</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">Instant</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">Instant</div>
               <p className="text-gray-600">RTGS</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">Hourly</div>
+              <div className="text-2xl font-bold text-gold-600 mb-1">Hourly</div>
               <p className="text-gray-600">NEFT Batches</p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const RTGSNEFT = () => {
       </Card>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Key Features</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {(features || []).map((feature, index) => (
             <div key={index} className="flex items-center space-x-3">
@@ -79,13 +79,13 @@ const RTGSNEFT = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">RTGS Charges</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">RTGS Charges</h2>
         <Card>
           <CardContent>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gradient-to-r from-primary-800 to-primary-700 text-white">
+                  <tr className="bg-trust-900 text-white">
                     <th className="px-6 py-3 text-left font-semibold">Amount</th>
                     <th className="px-6 py-3 text-left font-semibold">Charges</th>
                     <th className="px-6 py-3 text-left font-semibold">Frequency</th>
@@ -95,7 +95,7 @@ const RTGSNEFT = () => {
                   {charges.map((charge, index) => (
                     <tr
                       key={index}
-                      className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-primary-50 transition-colors border-b border-gray-200`}
+                      className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'} hover:bg-trust-50/60 transition-colors border-b border-gray-200`}
                     >
                       <td className="px-6 py-4 font-medium text-gray-900">{charge[0]}</td>
                       <td className="px-6 py-4 text-gray-700">{charge[1]}</td>
@@ -138,17 +138,17 @@ const RTGSNEFT = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-primary-600 text-white">
+      <Card className="bg-trust-900 text-white">
         <CardContent className="text-center py-8">
           <h3 className="text-2xl font-bold mb-4">Start Transferring Funds Today</h3>
-          <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-trust-200 mb-6 max-w-2xl mx-auto">
             Experience seamless fund transfers with our RTGS/NEFT services.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors">
+            <Link to="/contact" className="bg-white text-trust-900 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors">
               Register Now
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-all">
+            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-trust-900 font-medium py-3 px-8 rounded-lg transition-all">
               Get Help
             </Link>
           </div>

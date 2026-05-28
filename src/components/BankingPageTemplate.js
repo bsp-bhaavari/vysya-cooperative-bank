@@ -28,16 +28,16 @@ const BankingPageTemplate = ({
     if (!data || !data.name) return null;
     
     return (
-      <div className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-trust-950 text-white rounded-xl p-8 mb-8 border border-primary-600/40 shadow-premium-sm">
-        <div className="pointer-events-none absolute inset-0 pattern-dots opacity-20" aria-hidden />
+      <div className="relative overflow-hidden bg-gradient-to-br from-trust-800 via-trust-900 to-trust-950 text-white rounded-xl p-8 mb-8 border border-trust-600/30 shadow-premium-sm">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-trust-950/30 to-transparent" aria-hidden />
         <div className="relative flex flex-col md:flex-row items-center justify-between">
           <div className="flex-1">
             <h1 className="text-4xl font-bold mb-4 tracking-tight">{data.name}</h1>
-            <p className="text-xl mb-6 text-primary-100/90 leading-relaxed">{data.description || ''}</p>
+            <p className="text-xl mb-6 text-trust-200/90 leading-relaxed">{data.description || ''}</p>
             <div className="flex flex-wrap gap-4">
               <Link 
                 to="/contact" 
-                className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
+                className="bg-trust-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-trust-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
               >
                 Apply Now
                 <ArrowRight className="w-5 h-5" />
@@ -59,14 +59,14 @@ const BankingPageTemplate = ({
 
   const renderKeyFeatures = () => (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-2">
+      <h2 className="text-2xl font-bold text-trust-900 mb-6 flex items-center gap-2">
         <Star className="w-6 h-6 text-trust-600" />
         Key Features & Benefits
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {(data.features || []).map((feature, index) => (
-          <div key={index} className="flex items-start gap-3 p-4 bg-gradient-to-br from-surface-tint/90 to-white border border-primary-100/80 rounded-lg shadow-sm hover:shadow-soft transition-shadow duration-300">
-            <CheckCircle className="w-5 h-5 text-primary-700 mt-0.5 flex-shrink-0" />
+          <div key={index} className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-soft transition-shadow duration-300">
+            <CheckCircle className="w-5 h-5 text-trust-600 mt-0.5 flex-shrink-0" />
             <span className="text-gray-700">{feature}</span>
           </div>
         ))}
@@ -76,15 +76,15 @@ const BankingPageTemplate = ({
 
   const renderEligibilityCriteria = () => (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-2">
+      <h2 className="text-2xl font-bold text-trust-900 mb-6 flex items-center gap-2">
         <Users className="w-6 h-6 text-trust-600" />
         Eligibility Criteria
       </h2>
-      <div className="bg-surface-tint border-l-4 border-primary-700 p-6 rounded-lg border border-primary-100/70">
+      <div className="bg-white border-l-4 border-trust-600 p-6 rounded-lg border border-gray-200">
         <ul className="space-y-3">
           {(data.eligibility || []).map((criteria, index) => (
             <li key={index} className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-primary-700 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="w-5 h-5 text-trust-600 mt-0.5 flex-shrink-0" />
               <span className="text-gray-700">{criteria}</span>
             </li>
           ))}
@@ -95,15 +95,15 @@ const BankingPageTemplate = ({
 
   const renderRequiredDocuments = () => (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-2">
+      <h2 className="text-2xl font-bold text-trust-900 mb-6 flex items-center gap-2">
         <FileText className="w-6 h-6 text-trust-600" />
         Required Documents
       </h2>
-      <div className="bg-surface-muted/80 border border-primary-100/70 p-6 rounded-lg">
+      <div className="bg-gray-50/50 border border-gray-200 p-6 rounded-lg">
         <ul className="space-y-3">
           {(data.documents || []).map((doc, index) => (
             <li key={index} className="flex items-start gap-3">
-              <FileText className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
+              <FileText className="w-5 h-5 text-trust-600 mt-0.5 flex-shrink-0" />
               <span className="text-gray-700">{doc}</span>
             </li>
           ))}
@@ -117,7 +117,7 @@ const BankingPageTemplate = ({
     
     return (
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-trust-900 mb-6 flex items-center gap-2">
           <DollarSign className="w-6 h-6 text-trust-600" />
           {isLoan ? 'Interest Rates & Charges' : isAccount ? 'Interest Details' : 'Service Charges'}
         </h2>
@@ -126,12 +126,12 @@ const BankingPageTemplate = ({
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-primary-700" />
+                  <TrendingUp className="w-5 h-5 text-trust-600" />
                   Interest Rate
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-primary-800">{data.interestRate}</p>
+                <p className="text-2xl font-bold text-trust-800">{data.interestRate}</p>
                 {data.maxAmount && (
                   <p className="text-gray-600 mt-2">Maximum Amount: <span className="font-semibold">{data.maxAmount}</span></p>
                 )}
@@ -172,23 +172,23 @@ const BankingPageTemplate = ({
     
     return (
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-trust-900 mb-6 flex items-center gap-2">
           <Calendar className="w-6 h-6 text-trust-600" />
           Repayment Details
         </h2>
-        <div className="bg-surface-tint border-l-4 border-gold-500 p-6 rounded-lg border border-primary-100/70">
+        <div className="bg-white border-l-4 border-gold-500 p-6 rounded-lg border border-gray-200">
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <p className="text-gray-600 mb-2">Maximum Amount</p>
-              <p className="text-2xl font-bold text-primary-800">{data.maxAmount}</p>
+              <p className="text-2xl font-bold text-trust-800">{data.maxAmount}</p>
             </div>
             <div>
               <p className="text-gray-600 mb-2">Maximum Tenure</p>
-              <p className="text-2xl font-bold text-primary-800">{data.maxTenure}</p>
+              <p className="text-2xl font-bold text-trust-800">{data.maxTenure}</p>
             </div>
             <div>
               <p className="text-gray-600 mb-2">Processing Time</p>
-              <p className="text-2xl font-bold text-primary-800">2-5 Days</p>
+              <p className="text-2xl font-bold text-trust-800">2-5 Days</p>
             </div>
           </div>
         </div>
@@ -220,7 +220,7 @@ const BankingPageTemplate = ({
 
     return (
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-trust-900 mb-6 flex items-center gap-2">
           <Shield className="w-6 h-6 text-trust-600" />
           Frequently Asked Questions
         </h2>
@@ -241,20 +241,20 @@ const BankingPageTemplate = ({
   };
 
   const renderCTASection = () => (
-    <div className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-trust-950 text-white rounded-xl p-8 text-center border border-primary-600/40 shadow-premium-sm">
-      <div className="pointer-events-none absolute inset-0 pattern-dots opacity-15" aria-hidden />
+    <div className="relative overflow-hidden bg-gradient-to-br from-trust-800 via-trust-900 to-trust-950 text-white rounded-xl p-8 text-center border border-trust-600/30 shadow-premium-sm">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-trust-950/30 to-transparent" aria-hidden />
       <div className="relative">
       <h2 className="text-3xl font-bold mb-4 tracking-tight">Ready to Get Started?</h2>
-      <p className="text-xl mb-6 text-primary-100/90">
+      <p className="text-xl mb-6 text-trust-200/90">
         Contact us today to learn more about {data.name} and how it can benefit you
       </p>
       <div className="flex flex-wrap justify-center gap-4">
         <Link 
           to="/contact" 
-          className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
-        >
-          <Phone className="w-5 h-5" />
-          Contact Us
+          className="bg-gold-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gold-600 transition-all duration-300 shadow-md hover:-translate-y-0.5 inline-flex items-center gap-2"
+          >
+            <Phone className="w-5 h-5" />
+            Contact Us
         </Link>
         <button type="button" className="border-2 border-white/80 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/12 transition-all duration-300 inline-flex items-center gap-2">
           <Mail className="w-5 h-5" />

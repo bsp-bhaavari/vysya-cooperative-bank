@@ -12,11 +12,11 @@ export default function DemandDraft() {
     <div className="section-padding">
       <div className="container-max">
         <div className="flex items-center space-x-4 mb-6">
-          <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
-            <FileText className="w-8 h-8 text-primary-600" />
+          <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center">
+            <FileText className="w-8 h-8 text-trust-600" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Demand Draft</h1>
+            <h1 className="text-3xl font-bold text-trust-900">Demand Draft</h1>
             <p className="text-gray-600">Secure demand draft facility with competitive commission rates</p>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function DemandDraft() {
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-gradient-to-r from-primary-800 to-primary-700 text-white">
+                  <tr className="bg-trust-900 text-white">
                     <th className="px-6 py-3 text-left font-semibold">Amount</th>
                     <th className="px-6 py-3 text-left font-semibold">Commission</th>
                   </tr>
@@ -56,7 +56,7 @@ export default function DemandDraft() {
                   {charges.map((charge, index) => (
                     <tr
                       key={index}
-                      className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-primary-50 transition-colors border-b border-gray-200`}
+                      className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'} hover:bg-trust-50/60 transition-colors border-b border-gray-200`}
                     >
                       <td className="px-6 py-4 font-medium text-gray-900">{charge[0]}</td>
                       <td className="px-6 py-4 text-gray-700">{charge[1]}</td>

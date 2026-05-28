@@ -12,9 +12,9 @@ const Table = ({
   const rows = rowsProp ?? data ?? [];
 
   return (
-    <div className={`overflow-x-auto rounded-xl border border-primary-200/60 shadow-soft ${className}`}>
+    <div className={`overflow-x-auto rounded-2xl border border-gray-100 shadow-card ${className}`}>
       <table className="w-full" {...props}>
-        <thead className="bg-gradient-to-r from-primary-800 via-primary-900 to-trust-900 border-b border-trust-800/50">
+        <thead className="bg-trust-900">
           <tr>
             {(headers || []).map((header, index) => (
               <th
@@ -26,12 +26,12 @@ const Table = ({
             ))}
           </tr>
         </thead>
-        <tbody className="divide-y divide-primary-100/80">
+        <tbody className="divide-y divide-gray-100">
           {(rows || []).map((row, rowIndex) => (
             <tr
               key={rowIndex}
-              className={`${striped && rowIndex % 2 === 0 ? 'bg-white' : 'bg-surface-tint/80'} ${
-                hover ? 'hover:bg-primary-50/70 transition-colors duration-200' : ''
+              className={`${striped && rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'} ${
+                hover ? 'hover:bg-trust-50/60 transition-colors duration-200' : ''
               }`}
             >
               {(row || []).map((cell, cellIndex) => (

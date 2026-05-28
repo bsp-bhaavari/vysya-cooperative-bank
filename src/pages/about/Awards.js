@@ -90,7 +90,7 @@ const Awards = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Awards & Recognition</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Awards & Recognition</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           We are proud to be recognized by various prestigious organizations for our commitment to excellence, 
           innovation, and customer service in the banking sector. These awards motivate us to continue delivering 
@@ -128,7 +128,7 @@ const Awards = () => {
       </Card>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Awards</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Recent Awards</h2>
         <div className="grid gap-6">
           {awards.map((award, index) => (
             <Card key={index} className="relative overflow-hidden">
@@ -141,7 +141,7 @@ const Awards = () => {
                   <div className="flex-grow">
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                        <h3 className="text-xl font-semibold text-trust-900 mb-1">
                           {award.title}
                         </h3>
                         <p className="text-gray-600">{award.organization}</p>
@@ -165,7 +165,7 @@ const Awards = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Certifications</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Certifications</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <Card key={index} className="text-center">
@@ -173,7 +173,7 @@ const Awards = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Award className="w-10 h-10 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-trust-900 mb-2">
                   {cert.name}
                 </h3>
                 <p className="text-sm text-gray-600 mb-1">{cert.organization}</p>
@@ -200,40 +200,40 @@ const Awards = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">✓</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">✓</span>
                   </div>
                   <p className="text-gray-700">Customer trust and satisfaction</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">✓</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">✓</span>
                   </div>
                   <p className="text-gray-700">Innovation in banking services</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">✓</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">✓</span>
                   </div>
                   <p className="text-gray-700">Regulatory compliance excellence</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">✓</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">✓</span>
                   </div>
                   <p className="text-gray-700">Financial inclusion initiatives</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">✓</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">✓</span>
                   </div>
                   <p className="text-gray-700">Quality management systems</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary-600 text-xs font-bold">✓</span>
+                  <div className="w-6 h-6 bg-trust-50/50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-trust-600 text-xs font-bold">✓</span>
                   </div>
                   <p className="text-gray-700">Community development impact</p>
                 </div>

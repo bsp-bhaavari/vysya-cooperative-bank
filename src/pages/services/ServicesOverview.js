@@ -108,8 +108,8 @@ const ServicesOverview = () => {
   ];
 
   const getServiceIcon = (icon, color) => {
-    const iconClass = color === 'primary' ? 'text-primary-600' : 'text-secondary-600';
-    const bgClass = color === 'primary' ? 'bg-primary-100' : 'bg-secondary-100';
+    const iconClass = color === 'primary' ? 'text-trust-600' : 'text-trust-600';
+    const bgClass = color === 'primary' ? 'bg-trust-50/50' : 'bg-gold-50/50';
     
     return (
       <div className={`w-16 h-16 ${bgClass} rounded-xl flex items-center justify-center mb-4`}>
@@ -121,7 +121,7 @@ const ServicesOverview = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Our Services</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           Discover our comprehensive range of banking services designed to make your banking experience 
           convenient, secure, and efficient. From traditional services to modern digital solutions, 
@@ -129,26 +129,26 @@ const ServicesOverview = () => {
         </p>
       </div>
 
-      <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
+      <Card className="bg-gradient-to-r from-trust-50/50 to-gold-50/50">
         <CardHeader>
           <CardTitle>Service Highlights</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">11+</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">11+</div>
               <p className="text-gray-600">Digital Services</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">24/7</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">24/7</div>
               <p className="text-gray-600">Availability</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">100%</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">100%</div>
               <p className="text-gray-600">Secure</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">Free</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">Free</div>
               <p className="text-gray-600">Basic Services</p>
             </div>
           </div>
@@ -161,7 +161,7 @@ const ServicesOverview = () => {
             <CardContent className="p-6">
               <div className="text-center">
                 {getServiceIcon(service.icon, service.color)}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-xl font-semibold text-trust-900 mb-3 group-hover:text-trust-600 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
@@ -177,7 +177,7 @@ const ServicesOverview = () => {
                 </div>
                 <Link
                   to={service.link}
-                  className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
+                  className="inline-flex items-center text-trust-600 hover:text-trust-700 font-medium"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1" />
@@ -188,18 +188,18 @@ const ServicesOverview = () => {
         ))}
       </div>
 
-      <Card className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+      <Card className="bg-gradient-to-r from-trust-600 to-gold-600 text-white">
         <CardContent className="text-center py-8">
           <h3 className="text-2xl font-bold mb-4">Need Help with Our Services?</h3>
-          <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-trust-200/80 mb-6 max-w-2xl mx-auto">
             Our customer service team is available 24/7 to assist you with any queries about our services. 
             Get personalized guidance and support for all your banking needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors">
+            <Link to="/contact" className="bg-white text-trust-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors">
               Contact Support
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-all">
+            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-trust-600 font-medium py-3 px-8 rounded-lg transition-all">
               Visit Branch
             </Link>
           </div>

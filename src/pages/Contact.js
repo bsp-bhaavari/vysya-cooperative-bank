@@ -65,7 +65,7 @@ const Contact = () => {
       <div className="section-padding">
         <div className="container-max">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+            <h1 className="text-4xl font-bold text-trust-900 mb-4">Contact Us</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with Vysya Co-operative Bank Ltd. for all your banking needs.
             </p>
@@ -76,7 +76,7 @@ const Contact = () => {
               <CardContent>
                 <div className="text-center space-y-6">
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h2 className="text-2xl font-bold text-trust-900 mb-2">
                       VYSYA CO-OPERATIVE BANK LTD.
                     </h2>
                     <p className="text-lg text-gray-600">
@@ -85,7 +85,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start justify-center space-x-3">
-                    <MapPin className="w-5 h-5 text-primary-600 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-trust-600 mt-0.5" />
                     <p className="text-gray-700">
                       Dr. Sri Sri Shivakumara Swamiji Circle<br />
                       BH Road, Tumkur - 572102
@@ -93,15 +93,15 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center justify-center space-x-3">
-                    <Phone className="w-5 h-5 text-primary-600" />
+                    <Phone className="w-5 h-5 text-trust-600" />
                     <p className="text-gray-700 font-medium">
                       0816-2279934
                     </p>
                   </div>
 
                   <div className="flex items-center justify-center space-x-3">
-                    <Mail className="w-5 h-5 text-primary-600" />
-                    <a href="mailto:info@vcbltkr.bank.in" className="text-primary-600 hover:text-primary-700 font-medium">
+                    <Mail className="w-5 h-5 text-trust-600" />
+                    <a href="mailto:info@vcbltkr.bank.in" className="text-trust-600 hover:text-trust-700 font-medium">
                       info@vcbltkr.bank.in
                     </a>
                   </div>
@@ -111,11 +111,11 @@ const Contact = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Branches</h2>
+            <h2 className="text-2xl font-bold text-trust-900 mb-6">Our Branches</h2>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse bg-white rounded-xl shadow-sm overflow-hidden">
+                <table className="w-full border-collapse bg-white rounded-2xl shadow-card overflow-hidden">
                 <thead>
-                  <tr className="bg-gradient-to-r from-primary-800 to-primary-700 text-white">
+                  <tr className="bg-trust-900 text-white">
                     <th className="px-6 py-4 text-left font-semibold">Branch Name</th>
                     <th className="px-6 py-4 text-left font-semibold">Address</th>
                     <th className="px-6 py-4 text-left font-semibold">Phone</th>
@@ -127,24 +127,24 @@ const Contact = () => {
                     <tr
                       key={index}
                       className={`${
-                        index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                      } hover:bg-primary-50 transition-colors border-b border-gray-200`}
+                        index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
+                      } hover:bg-trust-50/60 transition-colors border-b border-gray-200`}
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center space-x-2">
-                          <Building className="w-4 h-4 text-primary-600 flex-shrink-0" />
+                          <Building className="w-4 h-4 text-trust-600 flex-shrink-0" />
                           <span className="font-medium text-gray-900">{branch.name}</span>
                         </div>
                       </td>
                       <td className="px-6 py-4 text-gray-700 text-sm">{branch.address}</td>
                       <td className="px-6 py-4 text-gray-700 whitespace-nowrap">
                         <div className="flex items-center space-x-1">
-                          <Phone className="w-3.5 h-3.5 text-primary-500" />
+                          <Phone className="w-3.5 h-3.5 text-trust-500" />
                           <span>{branch.phone}</span>
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <a href={`mailto:${branch.email}`} className="text-primary-600 hover:text-primary-700 text-sm flex items-center space-x-1">
+                        <a href={`mailto:${branch.email}`} className="text-trust-600 hover:text-trust-700 text-sm flex items-center space-x-1">
                           <Mail className="w-3.5 h-3.5" />
                           <span>{branch.email}</span>
                         </a>

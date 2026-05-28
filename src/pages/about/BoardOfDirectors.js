@@ -43,7 +43,7 @@ const BoardOfDirectors = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Board of Directors</h1>
+        <h1 className="text-3xl font-bold text-trust-900 mb-4">Board of Directors</h1>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -59,8 +59,8 @@ const BoardOfDirectors = () => {
                 className="w-48 h-56 object-contain rounded-lg shadow-md mx-auto bg-gray-100"
               />
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900">Sri K.N.Govindaraju</h3>
-                <p className="text-primary-600 font-semibold">President</p>
+                <h3 className="text-xl font-bold text-trust-900">Sri K.N.Govindaraju</h3>
+                <p className="text-trust-600 font-semibold">President</p>
               </div>
               <div className="space-y-2 text-gray-700 mt-4">
                 <p>
@@ -88,9 +88,9 @@ const BoardOfDirectors = () => {
                 className="w-48 h-56 object-contain rounded-lg shadow-md mx-auto bg-gray-100"
               />
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900">CA Ramamurthy.K.S.</h3>
-                <p className="text-primary-600 font-semibold">B.Com., FCA, DISA (ICAI)</p>
-                <p className="text-primary-600 font-semibold">Vice President</p>
+                <h3 className="text-xl font-bold text-trust-900">CA Ramamurthy.K.S.</h3>
+                <p className="text-trust-600 font-semibold">B.Com., FCA, DISA (ICAI)</p>
+                <p className="text-trust-600 font-semibold">Vice President</p>
               </div>
               <div className="space-y-2 text-gray-700 mt-4">
                 <p>

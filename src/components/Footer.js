@@ -23,8 +23,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-primary-950 via-trust-950 to-primary-950 text-white overflow-hidden border-t-4 border-primary-500">
-      <div className="pointer-events-none absolute inset-0 pattern-dots opacity-[0.35]" aria-hidden />
+    <footer className="relative bg-gradient-to-b from-trust-950 via-trust-900 to-trust-950 text-white overflow-hidden border-t-4 border-trust-600">
+      <div className="pointer-events-none absolute inset-0" aria-hidden style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
       <div className="relative section-padding">
         <div className="container-max">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -37,7 +37,7 @@ const Footer = () => {
                   </span>
                 </div>
               </div>
-              <p className="text-primary-100/85 text-sm leading-relaxed">
+              <p className="text-trust-200/80 text-sm leading-relaxed">
                 Your trusted financial partner committed to providing secure and innovative banking solutions for our community.
               </p>
 
@@ -52,7 +52,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link
                       to={link.path}
-                      className="text-primary-100/80 hover:text-gold-300 transition-colors duration-200 text-sm"
+                      className="text-trust-200/80 hover:text-white transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link
                       to={service.path}
-                      className="text-primary-100/80 hover:text-gold-300 transition-colors duration-200 text-sm"
+                      className="text-trust-200/80 hover:text-white transition-colors duration-200 text-sm"
                     >
                       {service.name}
                     </Link>
@@ -86,15 +86,15 @@ const Footer = () => {
               <div className="space-y-3 mt-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span className="text-primary-100/85 text-sm">0816-2279934</span>
+                  <span className="text-trust-200/80 text-sm">0816-2279934</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-gold-400 shrink-0" />
-                  <a href="mailto:info@vcbltkr.bank.in" className="text-primary-100/85 text-sm hover:text-gold-300 transition-colors duration-200">info@vcbltkr.bank.in</a>
+                  <a href="mailto:info@vcbltkr.bank.in" className="text-trust-200/80 text-sm hover:text-gold-300 transition-colors duration-200">info@vcbltkr.bank.in</a>
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-4 h-4 text-gold-400 mt-1 shrink-0" />
-                  <span className="text-primary-100/85 text-sm">
+                  <span className="text-trust-200/80 text-sm">
                     VYSYA CO-OPERATIVE BANK LTD.<br />
                     Administrative Office, 2nd Floor<br />
                     Dr. Sri Sri Shivakumara Swamiji Circle<br />
@@ -107,9 +107,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="relative border-t border-primary-800/80">
+      <div className="relative border-t border-trust-800/60">
         <div className="container-max py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-primary-200/70">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-trust-300/70">
             <p>&copy; 2024 Vysya Cooperative Bank Ltd. All rights reserved.</p>
             <div className="flex space-x-6 mt-2 md:mt-0">
               <a href="#" className="hover:text-gold-300 transition-colors duration-200">Privacy Policy</a>

@@ -78,11 +78,11 @@ const MobileBanking = () => {
   return (
     <div className="space-y-8">
       <div className="flex items-center space-x-4 mb-6">
-        <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center">
-          <Smartphone className="w-8 h-8 text-primary-600" />
+        <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center">
+          <Smartphone className="w-8 h-8 text-trust-600" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Mobile Banking</h1>
+          <h1 className="text-3xl font-bold text-trust-900">Mobile Banking</h1>
           <p className="text-gray-600">Bank anytime, anywhere with our mobile app</p>
         </div>
       </div>
@@ -93,26 +93,26 @@ const MobileBanking = () => {
         Secure, convenient, and designed for your lifestyle.
       </p>
 
-      <Card className="bg-gradient-to-r from-primary-50 to-secondary-50">
+      <Card className="bg-gradient-to-r from-trust-50/50 to-gold-50/50">
         <CardHeader>
           <CardTitle>App Features</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">50+</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">50+</div>
               <p className="text-gray-600">Banking Services</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">4.8★</div>
+              <div className="text-2xl font-bold text-gold-600 mb-1">4.8★</div>
               <p className="text-gray-600">App Rating</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-1">1M+</div>
+              <div className="text-2xl font-bold text-trust-600 mb-1">1M+</div>
               <p className="text-gray-600">Downloads</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary-600 mb-1">256-bit</div>
+              <div className="text-2xl font-bold text-gold-600 mb-1">256-bit</div>
               <p className="text-gray-600">Encryption</p>
             </div>
           </div>
@@ -120,7 +120,7 @@ const MobileBanking = () => {
       </Card>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Key Features</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {(features || []).map((feature, index) => (
             <div key={index} className="flex items-center space-x-3">
@@ -132,15 +132,15 @@ const MobileBanking = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Mobile Banking</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">Why Choose Mobile Banking</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {(benefits || []).map((benefit, index) => (
             <Card key={index} className="text-center">
               <CardContent>
-                <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  {React.createElement(benefit.icon, { className: "w-8 h-8 text-primary-600" })}
+                <div className="w-16 h-16 bg-trust-50/50 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  {React.createElement(benefit.icon, { className: "w-8 h-8 text-trust-600" })}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-trust-900 mb-3">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -161,7 +161,7 @@ const MobileBanking = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {(services || []).map((service, index) => (
                 <div key={index}>
-                  <h4 className="font-semibold text-gray-900 mb-2">{service.name}</h4>
+                  <h4 className="font-semibold text-trust-900 mb-2">{service.name}</h4>
                   <ul className="space-y-1 text-sm text-gray-700">
                     {(service.items || []).map((item, idx) => (
                       <li key={idx}>• {item}</li>
@@ -221,15 +221,15 @@ const MobileBanking = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">How to Get Started</h2>
+        <h2 className="text-2xl font-bold text-trust-900 mb-6">How to Get Started</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {(steps || []).map((step, index) => (
             <Card key={index} className="text-center">
               <CardContent>
-                <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                <div className="w-12 h-12 bg-trust-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <h3 className="font-semibold text-trust-900 mb-2">{step.title}</h3>
                 <p className="text-sm text-gray-600">{step.description}</p>
               </CardContent>
             </Card>
@@ -237,10 +237,10 @@ const MobileBanking = () => {
         </div>
       </div>
 
-      <Card className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+      <Card className="bg-gradient-to-r from-trust-600 to-gold-600 text-white">
         <CardContent className="text-center py-8">
           <h3 className="text-2xl font-bold mb-4">Download Our Mobile App</h3>
-          <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-trust-200/80 mb-6 max-w-2xl mx-auto">
             Start banking on the go! Download our mobile app from Google Play Store or Apple App Store 
             and experience the convenience of mobile banking.
           </p>
@@ -264,7 +264,7 @@ const MobileBanking = () => {
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Android</h4>
+              <h4 className="font-semibold text-trust-900 mb-3">Android</h4>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>• Android 5.0 and above</li>
                 <li>• Minimum 2GB RAM</li>
@@ -273,7 +273,7 @@ const MobileBanking = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3">iOS</h4>
+              <h4 className="font-semibold text-trust-900 mb-3">iOS</h4>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>• iOS 11.0 and above</li>
                 <li>• iPhone 5s or later</li>

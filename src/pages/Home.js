@@ -99,7 +99,7 @@ const Home = () => {
       maxAmount: "Rs.70 Lacs",
       maxTenure: "240 Months",
       description: "Up to Rs.35 Lacs",
-      gradient: "from-green-500 to-emerald-600"
+      gradient: "from-trust-500 to-trust-700"
     },
     {
       title: "Vasavamba Housing Loan",
@@ -107,7 +107,7 @@ const Home = () => {
       maxAmount: "Rs.70 Lacs",
       maxTenure: "240 Months",
       description: "Above Rs.35 Lakhs",
-      gradient: "from-blue-500 to-indigo-600"
+      gradient: "from-trust-600 to-gold-500"
     },
     {
       title: "Vasavi Housing Loan",
@@ -115,7 +115,7 @@ const Home = () => {
       maxAmount: "Rs.70 Lacs",
       maxTenure: "240 Months",
       description: "Competitive Rates",
-      gradient: "from-purple-500 to-violet-600"
+      gradient: "from-trust-500 to-trust-700"
     }
   ];
 
@@ -155,8 +155,8 @@ const Home = () => {
           }}
         />
         
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary-950/80 via-primary-900/55 to-black/35" />
-        <div className="absolute inset-0 pattern-dots opacity-25 pointer-events-none" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-tr from-trust-950/85 via-trust-900/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-trust-950/40 to-transparent" aria-hidden />
         
         <button
           onClick={prevSlide}
@@ -223,7 +223,7 @@ const Home = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     to="/contact"
-                    className="px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-950/20 hover:shadow-xl hover:-translate-y-0.5 text-sm sm:text-base"
+                    className="px-6 py-3 bg-trust-600 text-white font-semibold rounded-lg hover:bg-trust-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm sm:text-base"
                   >
                     Get Started Today
                   </Link>
@@ -241,20 +241,20 @@ const Home = () => {
       </section>
 
       <section 
-        className="relative py-20 px-6 bg-cover bg-center bg-surface-page"
+        className="relative py-20 px-6 bg-cover bg-center"
         style={{
           backgroundImage: 'url("/images/about-bank.webp")'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-surface-page/95 via-surface-tint/88 to-surface-muted/85" />
-        <div className="absolute inset-0 bg-hero-mesh opacity-60 pointer-events-none" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-surface-tint/85 to-white/90" />
+        <div className="absolute inset-0 bg-subtle-glow pointer-events-none" aria-hidden />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-trust-900 mb-6 tracking-tight">
               About Vysya Co-operative Bank
             </h2>
-            <h3 className="text-2xl md:text-3xl text-primary-800/90 font-light mb-8">
+            <h3 className="text-2xl md:text-3xl text-trust-700 font-light mb-8">
               Trusted Banking for a Better Tomorrow
             </h3>
           </div>
@@ -278,8 +278,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary-800 via-primary-900 to-trust-950 relative overflow-hidden">
-        <div className="absolute inset-0 pattern-dots opacity-20 pointer-events-none" aria-hidden />
+      <section className="py-20 bg-gradient-to-br from-trust-800 via-trust-900 to-trust-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-repeat opacity-[0.04] pointer-events-none" aria-hidden style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-40 h-40 bg-trust-500/15 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-56 h-56 bg-gold-400/10 rounded-full blur-3xl" />
@@ -320,9 +320,9 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-surface-muted/80 to-surface-page">
         <div className="container-max">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-trust-900 mb-4 tracking-tight">
               Home Loan
-              <span className="text-primary-600"> Interest Rates</span>
+              <span className="text-trust-600"> Interest Rates</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Build your dream home with our affordable housing loans at competitive interest rates
@@ -333,16 +333,16 @@ const Home = () => {
             {homeLoanRates.map((loan, index) => (
               <div
                 key={index}
-                className="relative group bg-white rounded-2xl border border-primary-100/80 shadow-soft hover:shadow-premium-sm transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+                className="relative group bg-white rounded-2xl border border-gray-100 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 overflow-hidden"
               >
                 <div className={`absolute inset-x-0 top-0 h-2 bg-gradient-to-r ${loan.gradient}`} />
                 <div className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
-                    <Percent className="w-8 h-8 text-primary-600" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-trust-50 to-trust-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform">
+                    <Percent className="w-8 h-8 text-trust-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{loan.title}</h3>
                   <p className="text-sm text-gray-500 mb-4">{loan.description}</p>
-                  <div className="text-5xl font-bold text-primary-600 mb-2">{loan.rate}</div>
+                  <div className="text-5xl font-bold text-trust-600 mb-2">{loan.rate}</div>
                   <p className="text-gray-600 text-sm mb-4">Interest Rate p.a.</p>
                   <div className="border-t border-gray-100 pt-4 space-y-2">
                     <div className="flex justify-between text-sm">
@@ -356,7 +356,7 @@ const Home = () => {
                   </div>
                   <Link
                     to="/banking/loans/housing-loan"
-                    className="mt-6 inline-flex items-center text-primary-600 hover:text-primary-700 font-medium group/link"
+                    className="mt-6 inline-flex items-center text-trust-600 hover:text-trust-700 font-medium group/link"
                   >
                     Know More
                     <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
@@ -369,7 +369,7 @@ const Home = () => {
           <div className="text-center">
             <Link
               to="/interest-rates/loans"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center px-8 py-4 bg-trust-600 text-white font-semibold rounded-xl hover:bg-trust-700 transition-all duration-300 shadow-lg hover:-translate-y-0.5"
             >
               View All Loan Rates
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -380,8 +380,8 @@ const Home = () => {
 
       <section className="py-20 bg-gradient-to-b from-surface-muted/80 via-surface-page to-surface-tint">
         <div className="container-max">
-          <div className="bg-gradient-to-br from-primary-800 via-primary-900 to-trust-950 rounded-3xl p-12 md:p-16 relative overflow-hidden border border-trust-800/40 shadow-premium">
-            <div className="absolute inset-0 pattern-dots opacity-15 pointer-events-none" aria-hidden />
+          <div className="bg-gradient-to-br from-trust-800 via-trust-900 to-trust-950 rounded-3xl p-12 md:p-16 relative overflow-hidden border border-trust-800/40 shadow-elevated">
+            <div className="absolute inset-0 bg-gradient-to-t from-trust-950/30 to-transparent" aria-hidden />
             <div className="absolute inset-0">
               <div className="absolute top-0 right-0 w-64 h-64 bg-trust-500/12 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold-400/10 rounded-full blur-2xl" />
@@ -398,7 +398,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-950/25 hover:-translate-y-0.5 hover:shadow-xl"
+                  className="px-8 py-4 bg-gold-500 text-white font-bold rounded-xl hover:bg-gold-600 transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl"
                 >
                   Get Started Today
                 </Link>
